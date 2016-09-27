@@ -1,0 +1,30 @@
+{
+  "name": "sitekeeper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amecham1/SiteKeeper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amecham1/SiteKeeper/issues"
+  },
+  "homepage": "https://github.com/amecham1/SiteKeeper#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-watch": "^4.3.10",
+    "ng-annotate": "^1.2.1",
+    "path": "^0.12.7"
+  }
+}

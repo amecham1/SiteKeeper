@@ -1,0 +1,30 @@
+{
+  "name": "SiteKeeper",
+  "homepage": "https://github.com/amecham1/SiteKeeper",
+  "authors": [
+    "Andrew <andrew.mecham@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.3.1",
+    "angular": "1.5.8",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "jquery": "^3.1.1",
+    "gsap": "^1.19.0",
+    "hover": "Hover#^2.0.2",
+    "animate.css": "^3.5.2"
+  }
+}
