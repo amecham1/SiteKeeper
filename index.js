@@ -6,23 +6,24 @@ const massive = require('massive');
 const config = require('./server/config/config.json');
 
 
-const app = express();
+var app = module.exports = express();
 
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use(session({
-  secret: config.sessionSecret,
-  saveUninitialized: true,
-  resave: true
-}));
+app.use(session({secret: config.sessionSecret, saveUninitialized: true, resave: true}));
 
-const db = massive.connectSync({db : "SiteKeeper"})
-app.set('db',db);
+var db = massive.connectSync({db: "SiteKeeper"});
+app.set('db', db);
 app.use(express.static(__dirname + '/frontend'));
 
-module.exports = app;
+const request = require('./server/requests/requests.js');
 
-app.listen(config.port,function(){
-  console.log('listening on port',config.port);
+app.get('/site',request.getSite);
+
+
+
+
+app.listen(config.port, function() {
+    console.log('listening on port', config.port);
 })
