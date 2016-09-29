@@ -1,8 +1,8 @@
 const gulp =require ('gulp');
 const concat =require ('gulp-concat');
-const annotate =require ('gulp-ng-annotate');
+// const annotate =require ('gulp-ng-annotate');
 const plumber =require ('gulp-plumber');
-const uglify =require ('gulp-uglify');
+// const uglify =require ('gulp-uglify');
 const watch =require ('gulp-watch');
 const sass =require ('gulp-sass');
 const path =require ('path');
@@ -12,8 +12,8 @@ const sourcemaps =require ('gulp-sourcemaps');
 // DECLARE FILE PATHS
 // ============================================================
 const paths = {
-  jsSource: ['./app/**/*.js'],
-  sassSource: ['./assets/**/*.scss'],
+  jsSource: ['./app/**/*.js','./assets/js/*.js'],
+  sassSource: ['./assets/scss/*.scss'],
   // serverSource: ['./server/*.js']
 };
 const sassOptions = {

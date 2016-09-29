@@ -3,6 +3,6 @@ angular.module('keeperApp')
 
 function homeCtrl($scope){
 
-$scope.test='hello';
+$scope.test='hello is this working';
 
 }//end of homeCtrl
