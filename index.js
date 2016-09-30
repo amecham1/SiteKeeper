@@ -4,22 +4,32 @@ const session = require('express-session');
 const cors = require('cors');
 const massive = require('massive');
 const config = require('./server/config/config.json');
+var connectionstring = config.connectionString;
 
-
-var app = module.exports = express();
+var app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
 
 app.use(session({secret: config.sessionSecret, saveUninitialized: true, resave: true}));
+var massiveInstance = massive.connectSync({connectionString: connectionstring});
 
-var db = massive.connectSync({db: "SiteKeeper"});
-app.set('db', db);
+app.set('db', massiveInstance);
+
 app.use(express.static(__dirname + '/frontend'));
-
+module.exports = app;
 const request = require('./server/requests/requests.js');
+var db = app.get('db');
 
-app.get('/site',request.getSite);
+
+//Beginning of EndPoints
+app.get('/site', request.getSite);
+
+
+
+
+
+
 
 
 
