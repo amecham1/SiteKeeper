@@ -1,7 +1,7 @@
 angular.module('keeperApp')
-.controller('homeCtrl',homeCtrl)
+.controller('signinCtrl',signinCtrl)
 
-function homeCtrl($scope){
+function signinCtrl($scope){
 
 $scope.test='hello is this working';
 

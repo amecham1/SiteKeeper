@@ -12,8 +12,8 @@ const sourcemaps =require ('gulp-sourcemaps');
 // DECLARE FILE PATHS
 // ============================================================
 const paths = {
-  jsSource: ['./app/**/*.js','./assets/js/*.js'],
-  sassSource: ['./assets/scss/*.scss'],
+  jsSource: ['./frontend/app/**/*.js','./frontend/assets/js/*.js'],
+  sassSource: ['./frontend/assets/scss/*.scss'],
   // serverSource: ['./server/*.js']
 };
 const sassOptions = {
@@ -34,7 +34,7 @@ gulp.task('js', () => {
   // .pipe(annotate())
   //.pipe(uglify()) //Uncomment when code is production ready
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('./public'));
+  .pipe(gulp.dest('./frontend/public'));
 
 });
 // gulp.task('server', () => {
@@ -49,7 +49,7 @@ gulp.task('sass', () => {
   return gulp.src(paths.sassSource)
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(concat('style.css'))
-    .pipe(gulp.dest('./public'));
+    .pipe(gulp.dest('./frontend/public'));
 });
 // WATCH TASKS
 // ============================================================

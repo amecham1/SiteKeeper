@@ -1,4 +1,15 @@
 
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  padding: 50px 10px 20px 10px;
+}
+
+.general-list {
+  margin: 10px 0 10px 0;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -48,4 +59,43 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+signin-box {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.signin-title {
+  text-align: center;
+  font-size: 3.5rem;
+  padding: 150px 0 50px 0;
+}
+
+.signin-description {
+  text-align: center;
+  font-size: 2rem;
+  padding: 50px 0 25px 0;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.login-input {
+  width: 50%;
+  margin: 20px auto 20px auto;
+  font-size: 1rem;
+  padding: 10px 0 10px 0;
+}
+
+.signin-button {
+  width: 25%;
+  margin: 25px auto 20px auto;
+  padding: 10px 5px 10px 5px;
+  font-size: .9rem;
 }
