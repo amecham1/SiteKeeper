@@ -23,7 +23,8 @@ var db = app.get('db');
 
 
 //Beginning of EndPoints
-app.get('/site', request.getSite);
+app.get('/site', request.getsite);
+app.post('/createsite', request.createsite);
 
 
 

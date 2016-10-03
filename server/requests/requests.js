@@ -3,8 +3,8 @@ var app = require('../../index');
 var db = app.get('db');
 
 module.exports = {
-
-getSite: function(req, res, next) {
+// View Exsisting Sites
+getsite: function(req, res, next) {
     db.show_site(function(err, site) {
         if (!err) {
             res.status(200).json(site);
@@ -12,20 +12,21 @@ getSite: function(req, res, next) {
             console.log("This isn't working.")
         }
     })
+},
+// Add a new site
+createsite: function(req,res,next){
+  var r = req.body;
+  var siteArray = [r.name,r.address,r.site_info,r.contract_length,r.hours];
+  console.log(siteArray);
+  db.create_site(siteArray,function(err,site){
+    if(err){
+      res.send(err);
+    }
+    else{
+      res.send('site added')
+    }
+  })
 }
-
-
-
-// readProducts: function(req, res, next) {
-//   db.read_products(function(err,product){
-//     if(!err) {
-//       res.status(200).json(product);
-//     }
-//     else{
-//       console.log('run for the hills!');
-//     }
-//   })
-// },//end of readProducts
 
 
 }//end of module
