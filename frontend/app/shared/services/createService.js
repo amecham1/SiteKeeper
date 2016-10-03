@@ -6,7 +6,7 @@ function createService($http,$q){
 this.createsite = function(obj){
   return $http({
     method:"POST",
-    url:"localhost:3000/createsite",
+    url:"/createsite",
     data:obj
   })
 }

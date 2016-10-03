@@ -3,8 +3,8 @@ angular.module('keeperApp')
 
 return{
   restrict:'E',
-  templateUrl:'app/shared/createsite/createsite.html',
-  
+  templateUrl:'app/shared/createsite/createsitemodal.html',
+
 }
 
 
