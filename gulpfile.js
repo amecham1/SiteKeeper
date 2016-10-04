@@ -8,7 +8,7 @@ const sass =require ('gulp-sass');
 const path =require ('path');
 const babel =require ('gulp-babel');
 const sourcemaps =require ('gulp-sourcemaps');
-const browserSync = require('browser-sync').create()
+// const browserSync = require('browser-sync').create();
 
 // DECLARE FILE PATHS
 // ============================================================
@@ -50,20 +50,15 @@ gulp.task('sass', () => {
   return gulp.src(paths.sassSource)
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(concat('style.css'))
-    .pipe(gulp.dest('./frontend/public'));
+    .pipe(gulp.dest('./frontend/public'))
+
+
 });
-gulp.task('server', function () {
- browserSync.init({
-   proxy: 'http://localhost:3000',
-   port: 3001,
-   ui: false
- })
-})
+
+
 // WATCH TASKS
 // ============================================================
-gulp.task('build', function (done) {
- runSequence('set-production', ['ng-config', 'js', 'sass', 'HTML', 'Image'], done)
-})
+
 
 gulp.task('watch', () => {
   gulp.watch(paths.jsSource, ['js']);

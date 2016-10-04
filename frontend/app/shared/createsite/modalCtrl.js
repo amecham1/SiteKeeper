@@ -9,7 +9,9 @@ function modalCtrl($scope,$uibModalInstance,createService){
     createService.createsite(site)
     .then(function(response){
     })
-    $uibModalInstance.close(alert('site created'));
+    $uibModalInstance.close(
+      createService.alert()
+    );
   }
 
 

@@ -1,13 +1,20 @@
+<h3 class='modal-title'>Create Site</h3>
+
 <div class="modal-input">
+  <div class="modal-name">Name</div>
 <input class='modal-inputs' type="text" ng-model='site.name' placeholder="Name of site">
+<div class="modal-name">Address</div>
 <input class='modal-inputs' type="text" ng-model='site.address' placeholder="Address of site">
+<div class="modal-name">Site Info</div>
 <input class='modal-inputs' type="text" ng-model='site.site_info' placeholder="Site information">
+<div class="modal-name">Contract Length</div>
 <input class='modal-inputs' type="text" ng-model='site.contract_length' placeholder="Contract length">
-<input class='modal-inputs' type="text" ng-model='site.hours' placeholder="Hours">
+<div class="modal-name">Hours</div>
+<input class='modal-inputs modal-hours' type="text" ng-model='site.hours' placeholder="Hours">
 </div>
-<div ng-click='submit(site)'>
-Submit
-</div>
-<div ng-click='cancel()'>
+<div class= 'modal-button modal-cancel'ng-click='cancel()'>
 Cancel
+</div>
+<div class= 'modal-button modal-submit'ng-click='submit(site)'>
+Submit
 </div>

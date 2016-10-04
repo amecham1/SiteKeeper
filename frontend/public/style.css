@@ -1,9 +1,43 @@
 
+.modal-title {
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.modalwindow {
+  margin: 150px auto 0 auto;
+  width: 50vw;
+  height: 50vh;
+}
+
+.modal-name {
+  padding: 20px 0 0 0;
+}
+
 .modal-input {
-  padding-top: 100px;
+  margin: 10px auto 10px auto;
   display: flex;
   flex-direction: column;
   align-content: space-around;
+  width: 50%;
+}
+
+.modal-button {
+  width: 20px;
+  position: absolute;
+  bottom: 20px;
+  right: 100px;
+  margin-top: 50px;
+}
+
+.modal-cancel {
+  right: 200px;
+  padding-top: 40px;
+}
+
+.modal-hours {
+  margin-bottom: 60px;
 }
 
 .nav-list {

@@ -12,4 +12,14 @@ this.createsite = function(obj){
 }
 
 
+this.alert = function(){swal({
+    title: "Site Created!",
+    type: "success",
+    confirmButtonText: "Ok", 
+    allowOutsideClick: true
+  });
+
+    }
+
+
 }//end of service

@@ -8,9 +8,10 @@ return{
     console.log('fired!')
     $scope.open=function(){
       var modalInstance = $uibModal.open({
-        size:'lg',
+        size:'md',
         templateUrl:'app/shared/createsite/createsitemodal.html',
-        controller:'modalCtrl'
+        controller:'modalCtrl',
+        // windowTemplateUrl:'app/shared/createsite/createsitemodal.html'
       })
     }
     }
