@@ -1,7 +1,7 @@
-angular.module('keeperApp', ['ui.router','ui.bootstrap','ngAnimate'])
-.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+angular.module('keeperApp', ['ui.router','ui.bootstrap','ngAnimate','satellizer'])
+.config(function($stateProvider, $urlRouterProvider, $authProvider) {
 
-    // $locationProvider.html5Mode(true);
+
     $urlRouterProvider.otherwise('/')
 
     $stateProvider
@@ -16,10 +16,10 @@ angular.module('keeperApp', ['ui.router','ui.bootstrap','ngAnimate'])
       templateUrl: 'app/components/main/mainpage.html',
       controller: 'mainpageCtrl'
     })
-    // .state('sitemodal',{
-    //   url:'/sitemodal',
-    //   templateUrl: 'app/shared/createsite/createsite.html',
-    //   controller: 'complexCtrl'
-    // })
+// Begininning of satellizer
+
+
+
+
 
 })//end of angular app
