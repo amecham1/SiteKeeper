@@ -1,0 +1,34 @@
+<h3 class='modal-title'>Create Employee</h3>
+
+<div class="modal-input">
+    <div class="modal-name">First Name</div>
+    <input class='modal-inputs' type="text" ng-model='employee.first_name' placeholder="">
+    <div class="modal-name">Last Name</div>
+    <input class='modal-inputs' type="text" ng-model='employee.last_name' placeholder="">
+    <div class="modal-name">Full Time/Part Time</div>
+    <select class="modal-inputs" name="Full/Part time" ng-model='employee.full_part_time'>
+    <option value="Full Time">Full Time</option>
+    <option value="Part Time">Part Time</option>
+    </select>
+    <div class="modal-name">LEO / SFO</div>
+    <select class="modal-inputs" name="Certification" ng-model='employee.leo_sfo'>
+    <option value="LEO">LEO</option>
+    <option value="SFO">SFO</option>
+    </select>
+    <div class="modal-name">Admin</div>
+    <select class="modal-inputs" name="Admin" ng-model='employee.admin'>
+    <option value=true>Yes</option>
+    <option value=false>No</option>
+    </select>
+<div class="modal-name">County</div>
+<select class="modal-inputs last-modal" name="County" ng-model='employee.county'>
+<option value='Utah County'>Utah County</option>
+<option value='Salt Lake County'>Salt Lake County</option>
+</select></div>
+</div>
+<div class='modal-button modal-cancel' ng-click='cancel()'>
+    Cancel
+</div>
+<div class='modal-button modal-submit' ng-click='submit(employee)'>
+    Submit
+</div>

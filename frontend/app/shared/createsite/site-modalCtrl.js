@@ -1,8 +1,8 @@
 angular.module('keeperApp')
-.controller('modalCtrl',modalCtrl)
+.controller('site_modalCtrl',site_modalCtrl)
 
 
-function modalCtrl($scope,$uibModalInstance,createService){
+function site_modalCtrl($scope,$uibModalInstance,createService){
 
 
   $scope.submit = function(site){
@@ -10,7 +10,7 @@ function modalCtrl($scope,$uibModalInstance,createService){
     .then(function(response){
     })
     $uibModalInstance.close(
-      createService.alert()
+      createService.sitealert()
     );
   }
 

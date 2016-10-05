@@ -9,17 +9,35 @@ this.createsite = function(obj){
     url:"/createsite",
     data:obj
   })
-}
+};
+
+this.createemployee = function(emp){
+  return $http({
+    method:"POST",
+    url:"/createemployee",
+    data:emp
+  })
+};
 
 
-this.alert = function(){swal({
+this.sitealert = function(){swal({
     title: "Site Created!",
     type: "success",
-    confirmButtonText: "Ok", 
+    confirmButtonText: "Ok",
     allowOutsideClick: true
   });
 
-    }
+};
+
+this.employeealert = function(){swal({
+    title: "Employee Created!",
+    type: "success",
+    confirmButtonText: "Ok",
+    allowOutsideClick: true
+  });
+
+};
+
 
 
 }//end of service
