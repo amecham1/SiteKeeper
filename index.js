@@ -25,8 +25,10 @@ var db = app.get('db');
 //Beginning of EndPoints
 // View sites
 app.get('/site', request.getsite);
-// create sites
+// create the first part of the site
 app.post('/createsite', request.createsite);
+// create the second part of the site
+app.post('/scheduledata',request.createhours);
 // create employees
 app.post('/createemployee', request.createemployee);
 

@@ -1,0 +1,25 @@
+<h3 class='site-title'>Create Site</h3>
+
+    <menu-directive></menu-directive>
+<div class="site-input">
+    <div class="site-name">Name</div>
+    <input class='site-inputs' type="text" ng-model='site.name'>
+    <div class="site-name">Street</div>
+    <input class='site-inputs' type="text" ng-model='site.address_street'>
+    <div class="site-name">City</div>
+    <input class='site-inputs' type="text" ng-model='site.address_city'>
+    <div class="site-name">State</div>
+    <input class='site-inputs' type="text" ng-model='site.address_state'>
+    <div class="site-name">Site Info</div>
+    <input class='site-inputs' type="text" ng-model='site.site_info'>
+    <div class="site-name">Contract Begin</div>
+    <input class='site-inputs' type="text" ng-model='site.contract_begin'>
+    <div class="site-name">Contract End</div>
+    <input class='site-inputs last-site' type="text" ng-model='site.contract_end'>
+    <div class='site-button site-cancel' ng-click='cancel()'>
+        Cancel
+    </div>
+    <div class='site-button site-submit' ng-click='next(site)'>
+        Next
+    </div>
+  </div>

@@ -2,7 +2,7 @@ angular.module('keeperApp', ['ui.router','ui.bootstrap','ngAnimate','satellizer'
 .config(function($stateProvider, $urlRouterProvider, $authProvider) {
 
 
-    $urlRouterProvider.otherwise('/')
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
     .state('signin',{
@@ -10,16 +10,36 @@ angular.module('keeperApp', ['ui.router','ui.bootstrap','ngAnimate','satellizer'
       templateUrl: 'app/components/signin/signin.html',
       controller: 'signinCtrl'
     })
-
     .state('mainpage',{
       url:'/mainpage',
       templateUrl: 'app/components/main/mainpage.html',
       controller: 'mainpageCtrl'
     })
-// Begininning of satellizer
+    .state('createsite',{
+      url:'/createsite',
+      templateUrl:'app/components/createsite/createsite.html',
+      controller:'createSiteCtrl'
+    })
+    .state('createsitedays', {
+      url: '/days',
+      templateUrl: 'app/components/createsite/createsitedays.html',
+      controller: 'createSiteCtrl'
+    })
+    .state('createsitedays.hour',{
+      url:'/hours',
+      templateUrl:'app/components/createsite/createhours.html',
+      controller: 'createSiteCtrl'
+    })
+
+    .state('updatesite',{
+      url:'/updatesite',
+      templateUrl:'app/components/update_site/update_site.html',
+      controller:'updateSiteCtrl'
+    });
 
 
 
 
 
-})//end of angular app
+
+});//end of angular app

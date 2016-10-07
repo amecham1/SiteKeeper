@@ -1,0 +1,40 @@
+.update-container{
+  float: right;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-right: 28%;
+}
+
+.update-title{
+  text-align: center;
+  margin: 50px auto 0 auto;
+  font-size: 3rem;
+}
+.input-box{
+  width: 40%;
+  margin-top:10px;
+  align-self: flex-end;
+}
+.update-input{
+  width: 70%;
+  margin: 0 10px 0 0;
+  display: inline-block;
+}
+.search-icon{
+  display: inline-block;
+}
+
+.update-site-box{
+  width: 60vw;
+  height: 75vh;
+  background-color: papayawhip;
+  margin-top: 20px;
+}
+.update-site-results{
+  width: 60vw;
+  height: 20vh;
+  background-color: peru;
+  margin: 20px 0 10px 0;
+}

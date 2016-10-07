@@ -1,21 +1,15 @@
 
-.modal-title {
+.site-title {
   font-size: 3rem;
   text-align: center;
   padding-top: 20px;
 }
 
-.modalwindow {
-  margin: 150px auto 0 auto;
-  width: 50vw;
-  height: 50vh;
-}
-
-.modal-name {
+.site-name {
   padding: 20px 0 0 5px;
 }
 
-.modal-input {
+.site-input {
   margin: 10px auto 10px auto;
   display: flex;
   flex-direction: column;
@@ -23,28 +17,49 @@
   width: 50%;
 }
 
-.modal-button {
+.last-site {
+  margin-bottom: 10px;
+}
+
+.site-button {
+  display: inline-block;
   width: 20px;
-  position: absolute;
-  bottom: 20px;
-  right: 100px;
-  margin-top: 50px;
+  margin: 0 auto 0 auto;
 }
 
-.modal-cancel {
-  right: 200px;
-  padding-top: 40px;
+.day-input {
+  margin: 50px auto 10px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
 }
 
-.last-modal {
-  margin-bottom: 60px;
+.hour-box {
+  width: 50%;
+  margin: 100px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.shift-time {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.nav-bar {
+  width: 10vw;
+  position: fixed;
+  float: left;
+  z-index: 2;
 }
 
 .nav-list {
+  width: 20%;
   display: flex;
   flex-direction: column;
   align-content: space-between;
-  padding: 50px 10px 20px 10px;
+  padding: 10px 10px 20px 10px;
 }
 
 .general-list {
@@ -151,4 +166,49 @@ signin-box {
   display: inline-block;
   float: right;
   padding: 30px 40px 0 0;
+}
+
+.update-container {
+  float: right;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-right: 28%;
+}
+
+.update-title {
+  text-align: center;
+  margin: 50px auto 0 auto;
+  font-size: 3rem;
+}
+
+.input-box {
+  width: 40%;
+  margin-top: 10px;
+  align-self: flex-end;
+}
+
+.update-input {
+  width: 70%;
+  margin: 0 10px 0 0;
+  display: inline-block;
+}
+
+.search-icon {
+  display: inline-block;
+}
+
+.update-site-box {
+  width: 60vw;
+  height: 75vh;
+  background-color: papayawhip;
+  margin-top: 20px;
+}
+
+.update-site-results {
+  width: 60vw;
+  height: 20vh;
+  background-color: peru;
+  margin: 20px 0 10px 0;
 }

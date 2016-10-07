@@ -1,0 +1,55 @@
+.site-title{
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.site-name{
+padding: 20px 0 0 5px;
+}
+
+.site-input{
+  margin: 10px auto 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  width: 50%;
+}
+.last-site{
+  margin-bottom: 10px;
+}
+
+.site-button{
+  display: inline-block;
+  width: 20px;
+  margin: 0 auto 0 auto;
+
+}
+
+// Create Days Section
+
+.day-input{
+  margin: 50px auto 10px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+// Create Hours Section
+
+.hour-box{
+  width: 50%;
+  margin: 100px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.hour-title{
+
+}
+
+.shift-time{
+  display: inline-block;
+  margin-left:20px;
+}
