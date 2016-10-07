@@ -1,2 +1,2 @@
-SELECT user_id FROM site
+SELECT site_id FROM site
 where name='$1';

@@ -6,6 +6,7 @@ function createSiteCtrl($scope, createService, $state, $log) {
     $scope.next = function(site) {
         $state.go('createsitedays');
         createService.createsite(site).then(function(response){});
+        createService.createhours(site).then(function(response){});
     }
 
     // Opens subview from create days into create hours

@@ -21,27 +21,37 @@ module.exports = {
             if (err) {
                 res.send(err);
             } else {
-              res.send('site added');
+                res.send('site added');
             }
         });
     },
-    scehduledata: function(req, res, next) {
-          var r = req.body;
-          var day = r.shift.name;
-          db.create_contract_days(day, function(err, days) {
-                  if (err) {
-                      res.send(err);
-                  } else {
-                      db.create_hours(hours, function(err, hour) {
-                          if (err) {
-                              res.send(err);
-                          } else {
-                              res.send('hours and days added');
-                          }
-                      });
-                  }
-              });
-          },
+    scheduledata: function(req, res, next) {
+        var r = req.body;
+        var siteName = r.site_id;
+        var day = r.contract_day;
+        var shifthours = [r.firstshift_begin, r.firstshift_end, r.secondshift_begin, r.secondshift_end, r.thirdshift_begin, r.thirdshift_end, r.fourthshift_begin, r.fourthshift_end];
+        console.log(day);
+        db.show_site_name(siteName,function(err, siteId) {
+            if (err) {
+                res.send(err);
+            } else if (!err) {
+                db.create_contract_days(siteName,day, function(err, days) {
+                    if (err) {
+                        res.send(err);
+                    } else {
+                        db.create_hours(shifthours, function(err, hour) {
+                            if (err) {
+                                res.send(err);
+                            } else {
+                                res.send('hours and days added');
+                            }
+                        });
+                    }
+                });
+            }
+        });
+
+    },
     // Add a new employee
     createemployee: function(req, res, next) {
         var r = req.body;
