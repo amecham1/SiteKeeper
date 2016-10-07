@@ -1,14 +1,15 @@
 angular.module('keeperApp').controller('createSiteCtrl', createSiteCtrl)
 
 function createSiteCtrl($scope, createService, $state, $log) {
-
+$scope.siteId;
     // Goes from create site to create days also creates the first part of the site
     $scope.next = function(site) {
         $state.go('createsitedays');
-        createService.createsite(site).then(function(response){});
-        createService.createhours(site).then(function(response){});
-    }
+        createService.createsite(site)
+        .then(function(response)
+        {$scope.siteId = response.data[0].site_id;});
 
+    }
     // Opens subview from create days into create hours
     $scope.createhours = function(day) {
         $scope.getDay = day;
@@ -22,7 +23,8 @@ function createSiteCtrl($scope, createService, $state, $log) {
         for (var prop in shift) {
             shift[prop] = (new Date(shift[prop])).getHours() + ':' + (new Date(shift[prop])).getMinutes()
         }
-        shift.name = $scope.getDay;
+        shift.contract_day = $scope.getDay;
+        // shift.site_id = siteId;
         createService.createhours(shift).then(function(response){});
     };
 // clears all of the clock info

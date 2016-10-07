@@ -4,32 +4,32 @@
 <div class="shift-hours">
   <h3 class="shift-title">First Shift</h3>
   <div class="shift-begin">Shift Begin</div>
-<div uib-timepicker class="shift-time" ng-model="shift.beginshiftOne"  show-spinners=false hour-step="hstep" minute-step="mstep" show-meridian=false></div>
+<div uib-timepicker class="shift-time" ng-model="shift.firstshift_begin"  show-spinners=false hour-step="hstep" minute-step="mstep" show-meridian=false></div>
   <div class="shift-begin">Shift End</div>
-<div uib-timepicker class="shift-time" ng-model="shift.endshiftOne" ng-change="changed(beginshiftOne)" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
+<div uib-timepicker class="shift-time" ng-model="shift.firstshift_end" ng-change="changed(beginshiftOne)" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
 
 
 </div>
 <div class="shift-hours">
   <h3 class="shift-title">Second Shift</h3>
   <div class="shift-begin">Shift Begin</div>
-<div uib-timepicker class="shift-time" ng-model="shift.beginshiftTwo" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
+<div uib-timepicker class="shift-time" ng-model="shift.secondshift_begin" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
   <div class="shift-begin">Shift End</div>
-<div uib-timepicker class="shift-time" ng-model="shift.endshiftTwo" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
+<div uib-timepicker class="shift-time" ng-model="shift.secondshift_end" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
 </div>
 <div class="shift-hours">
   <h3 class="shift-title">Third Shift</h3>
   <div class="shift-begin">Shift Begin</div>
-<div uib-timepicker class="shift-time" ng-model="shift.beginshiftThird" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
+<div uib-timepicker class="shift-time" ng-model="shift.thirdshift_begin" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
   <div class="shift-begin">Shift End</div>
-<div uib-timepicker class="shift-time" ng-model="shift.endshiftThird" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
+<div uib-timepicker class="shift-time" ng-model="shift.thirdshift_end" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
 </div>
 <div class="shift-hours">
   <h3 class="shift-title">Fourth Shift</h3>
   <div class="shift-begin">Shift Begin</div>
-<div uib-timepicker class="shift-time" ng-model="shift.beginshiftFourth" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
+<div uib-timepicker class="shift-time" ng-model="shift.fourthshift_begin" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
   <div class="shift-begin">Shift End</div>
-<div uib-timepicker class="shift-time" ng-model="shift.endshiftFourth" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
+<div uib-timepicker class="shift-time" ng-model="shift.fourthshift_end" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
 </div>
 
 <button type="button" class="btn btn-danger" ng-click="clear()">Clear</button>

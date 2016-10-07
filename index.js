@@ -28,7 +28,7 @@ app.get('/site', request.getsite);
 // create the first part of the site
 app.post('/createsite', request.createsite);
 // create the second part of the site
-app.post('/scheduledata',request.scheduledata);
+app.post('/createdayandhours',request.createdayandhours);
 // create employees
 app.post('/createemployee', request.createemployee);
 

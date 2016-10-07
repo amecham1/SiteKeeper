@@ -50,7 +50,7 @@ gulp.task('sass', () => {
   return gulp.src(paths.sassSource)
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(concat('style.css'))
-    .pipe(gulp.dest('./frontend/public'))
+    .pipe(gulp.dest('./frontend/public'));
 
 
 });
@@ -58,7 +58,6 @@ gulp.task('sass', () => {
 
 // WATCH TASKS
 // ============================================================
-
 
 gulp.task('watch', () => {
   gulp.watch(paths.jsSource, ['js']);

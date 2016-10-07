@@ -14,6 +14,7 @@ module.exports = {
         });
     },
     // Add a new site
+
     createsite: function(req, res, next) {
         var r = req.body;
         var siteArray = [r.name, r.address_street, r.address_city, r.address_state, r.site_info, r.contract_begin, r.contract_end];
@@ -21,24 +22,19 @@ module.exports = {
             if (err) {
                 res.send(err);
             } else {
-                res.send('site added');
+                res.send(site);
             }
         });
     },
-    scheduledata: function(req, res, next) {
+    createdayandhours: function(req, res, next) {
         var r = req.body;
-        var siteName = r.site_id;
-        var day = r.contract_day;
-        var shifthours = [r.firstshift_begin, r.firstshift_end, r.secondshift_begin, r.secondshift_end, r.thirdshift_begin, r.thirdshift_end, r.fourthshift_begin, r.fourthshift_end];
-        console.log(day);
-        db.show_site_name(siteName,function(err, siteId) {
-            if (err) {
-                res.send(err);
-            } else if (!err) {
-                db.create_contract_days(siteName,day, function(err, days) {
+        var siteDayInfo = [r.site_id,r.contract_day];
+                db.create_contract_days(siteDayInfo, function(err, day) {
                     if (err) {
+                      console.log('this isnt working');
                         res.send(err);
                     } else {
+                      var shifthours = [day[0].cd_id,r.firstshift_begin, r.firstshift_end, r.secondshift_begin, r.secondshift_end, r.thirdshift_begin, r.thirdshift_end, r.fourthshift_begin, r.fourthshift_end];
                         db.create_hours(shifthours, function(err, hour) {
                             if (err) {
                                 res.send(err);
@@ -48,20 +44,16 @@ module.exports = {
                         });
                     }
                 });
-            }
-        });
-
     },
     // Add a new employee
     createemployee: function(req, res, next) {
         var r = req.body;
-        var employeeArray = [r.first_name, r.last_name, r.full_part_time, r.leo_sfo, r.admin, r.county];
-        // console.log(employeeArray);
+        var employeeArray = [r.first_name, r.last_name, r.admin,r.email, r.password];
         db.create_employee(employeeArray, function(err, employee) {
             if (err) {
                 res.send(err);
             } else {
-                res.send('employee added');
+                res.send(employee);
             }
         });
     }
