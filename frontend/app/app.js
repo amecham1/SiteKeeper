@@ -39,6 +39,11 @@ angular.module('keeperApp', ['ui.router','ui.bootstrap','ngAnimate','satellizer'
       url:'/createemployee',
       templateUrl:'app/components/createsite/create_employee.html',
       controller:'createSiteCtrl'
+    })
+    .state('schedule',{
+      url:'/schedulesites',
+      templateUrl:'app/schedule/schedule.html',
+      controller:'scheduleCtrl'
     });
 
 

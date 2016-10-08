@@ -8,7 +8,7 @@ const sass =require ('gulp-sass');
 const path =require ('path');
 const babel =require ('gulp-babel');
 const sourcemaps =require ('gulp-sourcemaps');
-// const browserSync = require('browser-sync').create();
+const browserSync = require('browser-sync').create();
 
 // DECLARE FILE PATHS
 // ============================================================
@@ -24,6 +24,14 @@ const sassOptions = {
 };
 // DEFINE TASKS
 // ============================================================
+gulp.task('server', function () {
+ browserSync.init({
+   proxy: 'http://localhost:3000',
+   port: 3001,
+   ui: false
+ })
+});
+
 gulp.task('js', () => {
   return gulp.src(paths.jsSource)
   .pipe(sourcemaps.init())
@@ -35,9 +43,12 @@ gulp.task('js', () => {
   // .pipe(annotate())
   //.pipe(uglify()) //Uncomment when code is production ready
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('./frontend/public'));
-
+  .pipe(gulp.dest('./frontend/public'))
+  .pipe(browserSync.stream({
+       match: '**/*.js'
+     }));
 });
+
 // gulp.task('server', () => {
 //   return gulp.src(paths.serverSource)
 //   .pipe(plumber())
@@ -50,15 +61,21 @@ gulp.task('sass', () => {
   return gulp.src(paths.sassSource)
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(concat('style.css'))
-    .pipe(gulp.dest('./frontend/public'));
+    .pipe(gulp.dest('./frontend/public'))
+    .pipe(browserSync.stream({
+         match: '**/*.css'
+       }));
 
 
 });
 
 
+
 // WATCH TASKS
 // ============================================================
-
+gulp.task('build', function (done) {
+ runSequence('set-production', ['ng-config', 'js', 'sass', 'HTML', 'Image'], done)
+})
 gulp.task('watch', () => {
   gulp.watch(paths.jsSource, ['js']);
   // gulp.watch(paths.serverSource, ['server']);

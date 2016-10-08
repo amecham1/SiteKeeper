@@ -28,14 +28,12 @@ module.exports = {
     },
     createdayandhours: function(req, res, next) {
         var r = req.body;
-        console.log(r);
                 db.create_contract_days([r.site_id,r.contract_day], function(err, day) {
                     if (err) {
                       console.log('this isnt working');
                         res.send(err);
                     } else {
                       var shifthours = [day[0].cd_id,r.firstshift_begin, r.firstshift_end, r.secondshift_begin, r.secondshift_end, r.thirdshift_begin, r.thirdshift_end, r.fourthshift_begin, r.fourthshift_end];
-console.log(day[0].cd_id);
                         db.create_hours(shifthours, function(err, hour) {
                             if (err) {
                                 res.send(err);
@@ -46,8 +44,6 @@ console.log(day[0].cd_id);
                       }
                     });
               },
-
-
     // Add a new employee
     createemployee: function(req, res, next) {
         var r = req.body;
@@ -60,7 +56,17 @@ console.log(day[0].cd_id);
                 console.log(employee);
             }
         });
-    }
+    },
+// Shows a schedule overview
+  scheduleoverview: function(req,res,next){
+    db.schedule_overview(function(err,overview){
+      if(err){
+        res.send(err,'overview not viewed');
+      } else{
+        res.send(overview);
+      }
+    });
+  }
 
 
 }; //end of module

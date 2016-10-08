@@ -25,6 +25,8 @@ var db = app.get('db');
 //Beginning of EndPoints
 // View sites
 app.get('/site', request.getsite);
+// View the schedule overview
+app.get('/scheduleoverview',request.scheduleoverview);
 // create the first part of the site
 app.post('/createsite', request.createsite);
 // create the second part of the site
