@@ -30,11 +30,15 @@ angular.module('keeperApp', ['ui.router','ui.bootstrap','ngAnimate','satellizer'
       templateUrl:'app/components/createsite/createhours.html',
       controller: 'createSiteCtrl'
     })
-
     .state('updatesite',{
       url:'/updatesite',
       templateUrl:'app/components/update_site/update_site.html',
       controller:'updateSiteCtrl'
+    })
+    .state('createemployee',{
+      url:'/createemployee',
+      templateUrl:'app/components/createsite/create_employee.html',
+      controller:'createSiteCtrl'
     });
 
 

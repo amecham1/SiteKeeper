@@ -31,9 +31,10 @@
   <div class="shift-begin">Shift End</div>
 <div uib-timepicker class="shift-time" ng-model="shift.fourthshift_end" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
 </div>
+<div class="add-hours" ng-click="getMoreHours(shift)"></div>
 
 <button type="button" class="btn btn-danger" ng-click="clear()">Clear</button>
-  <button type="button" class="btn btn-success" ng-click="getTimes(shift)">Submit</button>
+  <button type="button" class="btn btn-success" ng-click="getTimes()">Submit</button>
 
 
 
