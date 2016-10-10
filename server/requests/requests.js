@@ -11,6 +11,8 @@ module.exports = {
             } else {
                 console.log("This isn't working.");
             }
+
+
         });
     },
     // Add a new site
@@ -28,12 +30,13 @@ module.exports = {
     },
     createdayandhours: function(req, res, next) {
         var r = req.body;
-                db.create_contract_days([r.site_id,r.contract_day], function(err, day) {
+                db.create_contract_days([r.site_id], function(err, day) {
                     if (err) {
                       console.log('this isnt working');
                         res.send(err);
                     } else {
-                      var shifthours = [day[0].cd_id,r.firstshift_begin, r.firstshift_end, r.secondshift_begin, r.secondshift_end, r.thirdshift_begin, r.thirdshift_end, r.fourthshift_begin, r.fourthshift_end];
+                      // console.log(r.contract_day);
+                      var shifthours = [r.contract_day,r.firstshift_begin, r.firstshift_end, r.secondshift_begin, r.secondshift_end, r.thirdshift_begin, r.thirdshift_end, r.fourthshift_begin, r.fourthshift_end, r.site_id_fk];
                         db.create_hours(shifthours, function(err, hour) {
                             if (err) {
                                 res.send(err);
@@ -66,6 +69,30 @@ module.exports = {
         res.send(overview);
       }
     });
+  },
+
+  // shows contract days
+
+  scheduleDays: function(req,res,next){
+    db.schedule_days([req.params.id],function(err,days){
+      if(err){
+        res.send(err,'hours not viewed');
+      } else {
+        res.send(days);
+      }
+    })
+  },
+
+  // shows contract hours
+
+  scheduleHours: function(req,res,next){
+    db.schedule_hours([req.params.id],function(err,hours){
+      if(err){
+        res.send(err,'days not viewed');
+      } else{
+        res.send(hours);
+      }
+    })
   }
 
 

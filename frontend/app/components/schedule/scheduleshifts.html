@@ -1,0 +1,42 @@
+
+
+
+<div class="schedule-hours" ng-repeat="hour in hours">
+<br>
+<br>
+  {{hour.contract_day}}
+  <br>
+  <br>
+  <div class="shift-box">
+  Morning Shift:
+  <input type="checkbox" name="First Shift" value=true>
+{{hour.firstshift_begin}}
+{{hour.firstshift_end}}
+
+</div>
+<br>
+<div class="shift-box">
+Day Shift:
+  <input type="checkbox" name="Second Shift" value=true>
+{{hour.secondshift_begin}}
+{{hour.secondshift_end}}
+
+</div>
+<br>
+<div class="shift-box">
+Afternoon Shift:
+  <input type="checkbox" name="Third Shift" value=true>
+{{hour.thirdshift_begin}}
+{{hour.thirdshift_end}}
+
+</div>
+<br>
+<div class="shift-box">
+Grave Shift:
+  <input type="checkbox" name="Fourth Shift" value=true>
+{{hour.fourthshift_begin}}
+{{hour.fourthshift_end}}
+</div>
+
+<!-- </div> -->
+</div>

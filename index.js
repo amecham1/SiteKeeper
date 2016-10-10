@@ -27,6 +27,10 @@ var db = app.get('db');
 app.get('/site', request.getsite);
 // View the schedule overview
 app.get('/scheduleoverview',request.scheduleoverview);
+//  view the sites days
+app.get('/scheduledays/:id', request.scheduleDays);
+// view the sites hours
+app.get('/schedulehours/:id', request.scheduleHours);
 // create the first part of the site
 app.post('/createsite', request.createsite);
 // create the second part of the site

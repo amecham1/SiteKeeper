@@ -42,9 +42,14 @@ angular.module('keeperApp', ['ui.router','ui.bootstrap','ngAnimate','satellizer'
     })
     .state('schedule',{
       url:'/schedulesites',
-      templateUrl:'app/schedule/schedule.html',
+      templateUrl:'app/components/schedule/schedule.html',
       controller:'scheduleCtrl'
-    });
+    })
+    .state('schedule.selectshift',{
+      url:'/scheduleshifts',
+      templateUrl:'app/components/schedule/scheduleshifts.html',
+      controller:'scheduleCtrl'
+    })
 
 
 

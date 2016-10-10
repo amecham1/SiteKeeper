@@ -1,4 +1,4 @@
 insert into contract_days
-  (site_id,contract_day)
-  values($1,$2)
-  RETURNING cd_id 
+  (site_id)
+  values($1)
+  RETURNING cd_id

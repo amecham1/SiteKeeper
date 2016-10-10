@@ -8,7 +8,20 @@ this.overViewSites = function(){
     method:"GET",
     url:"/scheduleoverview"
   })
+}
 
+this.showDays = function(idNum){
+  return $http({
+    method:"GET",
+    url:"/scheduleDays/" + idNum
+  })
+}
+
+this.showHours = function(idNum){
+  return $http({
+    method:"GET",
+    url: "/scheduleHours/" + idNum
+  })
 }
 
 

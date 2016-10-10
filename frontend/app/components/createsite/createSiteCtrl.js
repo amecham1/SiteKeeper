@@ -33,6 +33,7 @@ function createSiteCtrl($scope, createService, $state) {
         }
         shift.contract_day = $scope.getDay;
         shift.siteId = createService.site;
+        shift.site_id_fk = createService.site;
         $scope.addtoShifts(shift);
           };
 
