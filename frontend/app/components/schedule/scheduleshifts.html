@@ -1,42 +1,44 @@
 
 
 
-<div class="schedule-hours" ng-repeat="hour in hours">
+<div class="schedule-hours" ng-repeat="shift in shifts track by $index">
 <br>
 <br>
-  {{hour.contract_day}}
+  {{shift.contract_day}}
   <br>
   <br>
   <div class="shift-box">
-  Morning Shift:
-  <input type="checkbox" name="First Shift" value=true>
-{{hour.firstshift_begin}}
-{{hour.firstshift_end}}
+  <div class="contract-day-shift" ng-model="shifts.contract_time_id">Morning Shift:</div>
+  <input type="checkbox" name="First Shift" ng-click="addShiftNum(shift.contract_time_id, shiftNum1)" ng-model="shiftNum1"ng-true-value="1" ng-false-value="null">
+{{shift.firstshift_begin}}
+{{shift.firstshift_end}}
 
 </div>
 <br>
 <div class="shift-box">
-Day Shift:
-  <input type="checkbox" name="Second Shift" value=true>
-{{hour.secondshift_begin}}
-{{hour.secondshift_end}}
+  <div class="contract-day-shift" ng-model="shifts.contract_time_id">Day Shift:</div>
+  <input type="checkbox" name="Second Shift"  ng-click="addShiftNum(shift.contract_time_id, shiftNum2)" ng-model="shiftNum2" ng-true-value="2" ng-false-value="null">
+{{shift.secondshift_begin}}
+{{shift.secondshift_end}}
 
 </div>
 <br>
 <div class="shift-box">
-Afternoon Shift:
-  <input type="checkbox" name="Third Shift" value=true>
-{{hour.thirdshift_begin}}
-{{hour.thirdshift_end}}
+  <div class="contract-day-shift" ng-model="shifts.contract_time_id">Afternoon Shift:</div>
+  <input type="checkbox" name="Third Shift" ng-click="addShiftNum(shift.contract_time_id, shiftNum3)" ng-model="shiftNum3" ng-true-value="3" ng-false-value="null">
+{{shift.thirdshift_begin}}
+{{shift.thirdshift_end}}
 
 </div>
 <br>
 <div class="shift-box">
-Grave Shift:
-  <input type="checkbox" name="Fourth Shift" value=true>
-{{hour.fourthshift_begin}}
-{{hour.fourthshift_end}}
+  <div class="contract-day-shift" ng-model="shifts.contract_time_id">Grave Shift:</div>
+  <input type="checkbox" name="Fourth Shift" ng-click="addShiftNum(shift.contract_time_id, shiftNum4)" ng-model="shiftNum4" ng-true-value="4" ng-false-value="null">
+{{shift.fourthshift_begin}}
+{{shift.fourthshift_end}}
 </div>
 
 <!-- </div> -->
 </div>
+
+<div class="post-employee-shifts" ng-click="submitEmpShifts(shifts)">Submit</div>

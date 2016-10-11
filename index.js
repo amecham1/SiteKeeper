@@ -24,19 +24,27 @@ var db = app.get('db');
 
 //Beginning of EndPoints
 // View sites
-app.get('/site', request.getsite);
+app.get('/site', request.getSite);
 // View the schedule overview
-app.get('/scheduleoverview',request.scheduleoverview);
+app.get('/siteoverview',request.siteOverview);
+// View the full site
+app.get('/showSite',request.showSite)
 //  view the sites days
 app.get('/scheduledays/:id', request.scheduleDays);
+// view site and hours
+app.get('/getsiteandhours/:id',request.getSiteandHours);
 // view the sites hours
 app.get('/schedulehours/:id', request.scheduleHours);
 // create the first part of the site
-app.post('/createsite', request.createsite);
+app.post('/createsite', request.createSite);
 // create the second part of the site
-app.post('/createdayandhours',request.createdayandhours);
+app.post('/createdayandhours',request.createDayandHours);
 // create employees
-app.post('/createemployee', request.createemployee);
+app.post('/createemployee', request.createEmployee);
+// create employee schedule
+app.post('/employeeschedule', request.employeeSchedule);
+
+
 
 
 

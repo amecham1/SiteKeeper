@@ -6,7 +6,7 @@ function overviewService($http){
 this.overViewSites = function(){
   return $http({
     method:"GET",
-    url:"/scheduleoverview"
+    url:"/siteoverview"
   })
 }
 
@@ -24,6 +24,13 @@ this.showHours = function(idNum){
   })
 }
 
+this.employeeSchedule = function(scheduleShift){
+  return $http({
+    method:"POST",
+    url:"/employeeschedule",
+    data:scheduleShift
+  })
+}
 
 
 } //end of service

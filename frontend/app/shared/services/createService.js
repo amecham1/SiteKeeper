@@ -6,59 +6,35 @@ function createService($http, $q) {
     this.shifts = [];
     this.site;
     this.createsite = function(obj) {
-        return $http({
-                method: "POST",
-                url: "/createsite",
-                data: obj
-            })
-            .then(function(res) {
-                siteId = res.data[0].site_id;
-                return res;
-            });
+        return $http({method: "POST", url: "/createsite", data: obj}).then(function(res) {
+            siteId = res.data[0].site_id;
+            return res;
+        });
     };
     // this will create the rest of the site -- days and hours
     this.createhours = function(shift) {
         console.log(shift);
         shift.site_id = siteId;
-        return $http({
-            method: "POST",
-            url: "/createdayandhours",
-            data: shift
-        });
+        return $http({method: "POST", url: "/createdayandhours", data: shift});
     };
     // this will create an employee
     var employeeId;
     this.createemployee = function(emp) {
-        return $http({
-                method: "POST",
-                url: "/createemployee",
-                data: emp
-            })
-            .then(function(res) {
-                employeeId = res.data[0].user_id;
-                console.log(employeeId);
-                return res;
-            });
+        return $http({method: "POST", url: "/createemployee", data: emp}).then(function(res) {
+            employeeId = res.data[0].user_id;
+            console.log(employeeId);
+            return res;
+        });
     };
 
     // this makes an alert saying the site has been created
     this.sitealert = function() {
-        swal({
-            title: "Site Created!",
-            type: "success",
-            confirmButtonText: "Ok",
-            allowOutsideClick: true
-        });
+        swal({title: "Site Created!", type: "success", confirmButtonText: "Ok", allowOutsideClick: true});
 
     };
     // this makes an alert saying that the employee has been created
     this.employeealert = function() {
-        swal({
-            title: "Employee Created!",
-            type: "success",
-            confirmButtonText: "Ok",
-            allowOutsideClick: true
-        });
+        swal({title: "Employee Created!", type: "success", confirmButtonText: "Ok", allowOutsideClick: true});
 
     };
 

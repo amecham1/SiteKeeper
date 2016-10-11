@@ -7,13 +7,19 @@
     </div>
 </div>
 <div class="update-site-box">
-    <div class="update-site-results" ng-repeat='site in sites'>
-    Name:{{site.name}} Address: {{site.address}}
+    <div class="update-site-results" ng-repeat="site in updatesites" ng-show="showupdate" ng-click="updateSite(site)">
+    Name:{{site.name}} <br>
+    Address: {{site.address_street}}
+              {{site.address_city}}
+              {{site.address_state}}
+    Contract Begins: {{site.contract_begin | date: 'shortDate'}}
+    Contract Ends: {{site.contract_end | date: 'shortDate'}}
+
     </div>
 </div>
 </div>
 
-
+<ui-view></ui-view>
 
 
 <menu-directive></menu-directive>

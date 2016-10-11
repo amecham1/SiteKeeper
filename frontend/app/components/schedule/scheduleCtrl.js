@@ -1,43 +1,68 @@
-angular.module('keeperApp')
-.controller('scheduleCtrl',scheduleCtrl)
+angular.module('keeperApp').controller('scheduleCtrl', scheduleCtrl)
 
-function scheduleCtrl($scope,overviewService, $state){
+function scheduleCtrl($scope, overviewService, $state,createService) {
+
+    var siteArray = [];
+
+    overviewService.overViewSites().then(function(res) {
+
+        var siteObj = res.data;
+
+        var currentName;
+        var titles = []
+        $scope.siteoverview = res.data;
+        $scope.showSites = true;
+
+    });
+// function will hide sites and then bring in site info
+    $scope.scheduleShift = function(idNum) {
+        $scope.showSites = false;
+
+        overviewService.showHours(idNum.site_id)
+        .then(function(res) {
+          $scope.hours = res.data;
+            $scope.shifts = res.data;
+
+        })
+        $state.go('schedule.selectshift')
+    }
+
+    var selectedShifts = [];
+    $scope.addShiftNum = function(contractId, shiftNum) {
+      // console.log($scope.shifts[0]);
+      // console.log($scope.shifts[0].site_id_fk);
+      if(shiftNum) {
+        selectedShifts.push({
+          shift_num: shiftNum,
+          contract_time_fk: contractId,
+          site_id_fk: $scope.shifts[0].site_id_fk
+        })
+      }
+      else{
+        var index = selectedShifts.map(function(val){
+          return val.contract_time_fk;
+        }).indexOf(contractId);
+
+        selectedShifts.splice(index,1);
+      }
+    }
 
 
 
-var siteArray = [];
-
-overviewService.overViewSites()
-.then(function(res){
-
-var siteObj = res.data;
-
-var currentName;
-var titles = []
-$scope.siteoverview = res.data;
-$scope.showSites = true;
-
-
-});
-
-
-$scope.scheduleShift = function(idNum){
-  $scope.showSites = false;
-
-
-  overviewService.showHours(idNum.site_id)
-  .then(function(res){
-    $scope.hours = res.data;
-    console.log(res.data);
+$scope.submitEmpShifts = function(){
+  console.log(selectedShifts);
+  selectedShifts.forEach(function(val){
+    console.log('hello');
+    overviewService.employeeSchedule(val)
+  .then(function(response){
   })
 
-  $state.go('schedule.selectshift')
+  })
+
+  selectedShifts = [];
+  console.log(selectedShifts);
 }
 
 
 
-
-
-
-
-}//end of controller
+} //end of controller

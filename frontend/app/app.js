@@ -30,9 +30,9 @@ angular.module('keeperApp', ['ui.router','ui.bootstrap','ngAnimate','satellizer'
       templateUrl:'app/components/createsite/createhours.html',
       controller: 'createSiteCtrl'
     })
-    .state('updatesite',{
-      url:'/updatesite',
-      templateUrl:'app/components/update_site/update_site.html',
+    .state('updateemployee',{
+      url:'/updateemployee',
+      templateUrl:'app/components/update_site/update_employee.html',
       controller:'updateSiteCtrl'
     })
     .state('createemployee',{
@@ -50,6 +50,16 @@ angular.module('keeperApp', ['ui.router','ui.bootstrap','ngAnimate','satellizer'
       templateUrl:'app/components/schedule/scheduleshifts.html',
       controller:'scheduleCtrl'
     })
+    .state('updatesite',{
+      url:'/updatesite',
+      templateUrl:'app/components/update_site/update_site.html',
+      controller:'updateSiteCtrl'
+    })
+    // .state('updatesite.updatefullsite'),{
+    //   url:'/fullsiteupdate',
+    //   templateUrl:'app/components/update_site/update_fullsite.html',
+    //   controller:'updateSiteCtrl'
+    // }
 
 
 

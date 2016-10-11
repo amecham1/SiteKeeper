@@ -1,2 +1,2 @@
 SELECT * FROM site
-where site_id='$1'
+where site_id = $1
