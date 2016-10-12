@@ -187,11 +187,24 @@ module.exports = {
         });
     },
 
-    getUandP: function(req,res){
-      db.user_pass(function(err,pw){
-        if(err){}
-      })
-    }
+    // getUandP: function(username,password,done){
+    //   db.user_pass({email:username},function(err,user){
+    //     if(err){
+    //       console.log('username not given');
+    //       res.send(err);
+    //     }
+    //     if(!user){
+    //       return done(null,false,{message:"Incorrect username"});
+    //     }
+    //     if(user.password !== user.password){
+    //       // This is not secure, testing purposes only!!!!!!!!!
+    //       return done(null,false,{message: 'Incorrect password'});
+    //     }
+    //     else{
+    //         return done(null,user);
+    //     }
+    //   });
+    // }
 
 
 

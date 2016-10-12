@@ -1,14 +1,18 @@
-signin-box{
+.signin-box{
   width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-content: space-around;
+  background-image: url("../assets/img/squared_metal.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .signin-title{
   text-align: center;
   font-size: 3.5rem;
-  padding: 150px 0 50px 0;
+  padding: 100px 0 50px 0;
 }
 .signin-description{
   text-align: center;;
