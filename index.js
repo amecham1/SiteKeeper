@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const cors = require('cors');
 const massive = require('massive');
+const passport = require('passport')
+const LocalStrategy = require('passport-local').Strategy;
 const config = require('./server/config/config.json');
 var connectionstring = config.connectionString;
 
@@ -20,6 +22,12 @@ app.use(express.static(__dirname + '/frontend'));
 module.exports = app;
 const request = require('./server/requests/requests.js');
 var db = app.get('db');
+
+passport.use(new LocalStrategy(
+  function(username,password,done){
+    
+  }
+))
 
 
 //Beginning of EndPoints
