@@ -17,6 +17,36 @@ this.allSiteInfo = function(siteId){
   })
 }
 
+this.updatesite = function(updateId,updateSite){
+  return $http({
+    method: "PUT",
+    url:'/updatesite/' + updateId,
+    data: updateSite
+  })
+}
+
+this.updatehours = function(updateId, updateTime){
+  return $http({
+    method: "PUT",
+    url:'/updatehours/' + updateId,
+    data: updateTime
+  })
+}
+
+this.updateemployee = function(updateId, updateEmployee){
+  return $http({
+    method: "PUT",
+    url: '/updateemployee/' + updateId,
+    data: updateEmployee
+  })
+}
+
+this.showemployee = function(){
+  return $http({
+    method: "GET",
+    url:"/viewemployee"
+  })
+}
 
 
 }//end of service

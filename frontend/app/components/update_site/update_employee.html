@@ -1,11 +1,12 @@
-<h3>Update Site</h3>
-
-<input type="text" ng-model='siteFinder' placeholder="Find Site">
-<div class="update-site-box">
-<div class="update-site-results"></div>
+<div class="update-container">
+<input type="text" class="update-title" ng-model="empupdate.first_name">
+<input type="text" class="update-title" ng-model="empupdate.last_name">
+<div class="update-address">
+  Admin:<input type="text" ng-model="empupdate.admin">
+Email:<input type="text" ng-model="empupdate.email">
+  Password:<input type="text" ng-model="empupdate.password">
 </div>
 
 
-
-
-<menu-directive></menu-directive>
+<div class="submit-site" ng-click="submitEmployee(empupdate)">Submit Update</div>
+</div>

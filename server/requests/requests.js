@@ -135,26 +135,64 @@ module.exports = {
   },
 
   updateSite: function(req,res,next){
-    var updateArr = [];
-    db.update_site(updateArr,function(err,res){
+    var r = req.body;
+    // var updateArr = [req.params.id,r.name, r.address_street, r.address_city, r.address_state, r.site_info, r.contract_begin, r.contract_end];
+    db.update_site([r.name, r.address_street, r.address_city, r.address_state, r.site_info, r.contract_begin, r.contract_end,req.params.id],function(err,response){
       if(err){
         console.log('site not updated');
-        res.send(err)
+        res.send(err);
       }
       else{
-        db.update_hours(updateArr,function(err,res){
+        console.log('site was updated');
+      }
+    });
+  },
+
+
+    updateHours: function(req,res,next){
+      var r = req.body;
+      // var updateHourArr = [req.params.id,r.contract_time_id,r.firstshift_begin, r.firstshift_end, r.secondshift_begin, r.secondshift_end, r.thirdshift_begin, r.thirdshift_end, r.fourthshift_begin, r.fourthshift_end,r.site_id_fk,r.contract_day];
+// console.log(r);
+        db.update_hours([r.firstshift_begin, r.firstshift_end, r.secondshift_begin, r.secondshift_end, r.thirdshift_begin, r.thirdshift_end, r.fourthshift_begin, r.fourthshift_end,r.contract_day,req.params.id],function(err,response){
           if(err){
             console.log('hours not updated');
-            res.send(err)
+            res.send(err);
           }
           else{
             console.log('site and hours updated');
-            res.send(res)
           }
-        })
+        });
+      },
+
+      updateEmployee: function(req,res){
+        var r = req.body;
+        console.log(r);
+        db.update_employee([r.first_name,r.last_name,r.admin,r.email,r.password,req.params.id],function(err,response){
+          if(err){
+            console.log('employee not updated');
+            res.send(err);
+          }
+          else{
+            console.log('employee was updated');
+          }
+        });
+
+      },
+
+      viewEmployee: function(req,res){
+        db.show_employee(function(err,emp){
+          if(err){
+            console.log('employee not shown');
+            res.send(err);
+          }
+          else{
+            // console.log(emp);
+            res.status(200).json(emp);
+          }
+        });
       }
-    })
-  }
+
+
 
 
 }; //end of module

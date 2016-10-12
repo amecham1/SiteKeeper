@@ -29,6 +29,8 @@ app.get('/site', request.getSite);
 app.get('/siteoverview',request.siteOverview);
 // View the full site
 app.get('/showSite',request.showSite)
+// View employee
+app.get('/viewemployee',request.viewEmployee);
 //  view the sites days
 app.get('/scheduledays/:id', request.scheduleDays);
 // view site and hours
@@ -44,7 +46,11 @@ app.post('/createemployee', request.createEmployee);
 // create employee schedule
 app.post('/employeeschedule', request.employeeSchedule);
 // updates the complete site
-app.put('/updatesite',request.updateSite);
+app.put('/updatesite/:id',request.updateSite);
+// update the hours
+app.put('/updatehours/:id',request.updateHours);
+// update the employee
+app.put('/updateemployee/:id', request.updateEmployee);
 
 
 

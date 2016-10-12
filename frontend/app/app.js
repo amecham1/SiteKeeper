@@ -60,6 +60,16 @@ angular.module('keeperApp', ['ui.router','ui.bootstrap','ngAnimate','satellizer'
       templateUrl:'app/components/update_site/update_fullsite.html',
       controller:'updateSiteCtrl'
     })
+    .state('showemployee',{
+      url:'/viewemployee',
+      templateUrl:'app/components/update_site/view_employee.html',
+      controller:'updateSiteCtrl'
+    })
+    .state('showemployee.updateemployee',{
+      url:'/updateemployee',
+      templateUrl:'app/components/update_site/update_employee.html',
+      controller: 'updateSiteCtrl'
+    })
 
 
 

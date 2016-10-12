@@ -1,0 +1,22 @@
+<div class="update-container" ng-show="showupdate">
+<h3 class='update-title'>Update Employee</h3>
+<div class="input-box">
+    <input class='update-input' type="text" ng-model='siteFinder' placeholder="Find Site">
+    <div class="search-icon">
+        <img src="assets/img/searchglass.png" alt="searchglass" />
+    </div>
+</div>
+<div class="update-site-box">
+    <div class="update-site-results" ng-repeat="emp in employee" ng-click="updateEmp(emp)">
+    Name:{{emp.first_name}} {{emp.last_name}}<br>
+    Admin: {{emp.admin}} <br>
+    Email: {{emp.email}}
+
+    </div>
+</div>
+</div>
+
+<ui-view></ui-view>
+
+
+<menu-directive></menu-directive>

@@ -1,13 +1,13 @@
 <div class="update-container">
-<h3 class="update-title">{{siteupdate.name}}</h3>
+<input type="text" class="update-title" ng-model="siteupdate.name">
 <div class="update-address">
   <input type="text" ng-model="siteupdate.address_street">
   <input type="text" ng-model="siteupdate.address_city">
   <input type="text" ng-model="siteupdate.address_state">
 </div>
 <div class="contract-start-end">
-  <input type="text" ng-model="site_begin">
-  <input type="text" ng-model="site_end">
+  <input type="text" ng-model="siteupdate.contract_begin">
+  <input type="text" ng-model="siteupdate.contract_end">
 </div>
 <div class="hours-update" ng-repeat="time in times">
   <input type="text" ng-model="time.contract_day">
@@ -37,4 +37,5 @@
   </div>
 
 </div>
+<div class="submit-site" ng-click="submitUpdate(siteupdate,times)">Submit Update</div>
 </div>
