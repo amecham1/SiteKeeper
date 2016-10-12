@@ -132,6 +132,28 @@ module.exports = {
         });
       }
     });
+  },
+
+  updateSite: function(req,res,next){
+    var updateArr = [];
+    db.update_site(updateArr,function(err,res){
+      if(err){
+        console.log('site not updated');
+        res.send(err)
+      }
+      else{
+        db.update_hours(updateArr,function(err,res){
+          if(err){
+            console.log('hours not updated');
+            res.send(err)
+          }
+          else{
+            console.log('site and hours updated');
+            res.send(res)
+          }
+        })
+      }
+    })
   }
 
 

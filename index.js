@@ -43,6 +43,8 @@ app.post('/createdayandhours',request.createDayandHours);
 app.post('/createemployee', request.createEmployee);
 // create employee schedule
 app.post('/employeeschedule', request.employeeSchedule);
+// updates the complete site
+app.put('/updatesite',request.updateSite);
 
 
 

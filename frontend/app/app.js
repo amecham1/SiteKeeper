@@ -55,11 +55,11 @@ angular.module('keeperApp', ['ui.router','ui.bootstrap','ngAnimate','satellizer'
       templateUrl:'app/components/update_site/update_site.html',
       controller:'updateSiteCtrl'
     })
-    // .state('updatesite.updatefullsite'),{
-    //   url:'/fullsiteupdate',
-    //   templateUrl:'app/components/update_site/update_fullsite.html',
-    //   controller:'updateSiteCtrl'
-    // }
+    .state('updatesite.updatefullsite',{
+      url:'/fullsiteupdate',
+      templateUrl:'app/components/update_site/update_fullsite.html',
+      controller:'updateSiteCtrl'
+    })
 
 
 

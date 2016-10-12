@@ -1,0 +1,40 @@
+<div class="update-container">
+<h3 class="update-title">{{siteupdate.name}}</h3>
+<div class="update-address">
+  <input type="text" ng-model="siteupdate.address_street">
+  <input type="text" ng-model="siteupdate.address_city">
+  <input type="text" ng-model="siteupdate.address_state">
+</div>
+<div class="contract-start-end">
+  <input type="text" ng-model="site_begin">
+  <input type="text" ng-model="site_end">
+</div>
+<div class="hours-update" ng-repeat="time in times">
+  <input type="text" ng-model="time.contract_day">
+  <div class="contract-times" ng-show="checkNull">
+  Begin of First Shift  <input type="text" ng-model="time.firstshift_begin">
+  </div>
+  <div class="contract_times" ng-show="checkNull">
+  End of First Shift  <input type="text" ng-model="time.firstshift_end">
+  </div>
+    <div class="contract_times" ng-show="checkNull">
+  Begin of Second Shift  <input type="text" ng-model="time.secondshift_begin">
+  </div>
+    <div class="contract_times" ng-show="checkNull">
+  End of Second Shift<input type="text" ng-model="time.secondshift_end">
+  </div>
+    <div class="contract_times" ng-show="checkNull">
+  Begin of Third Shift  <input type="text" ng-model="time.thirdshift_begin">
+  </div>
+    <div class="contract_times" ng-show="checkNull">
+  End of Third Shift  <input type="text" ng-model="time.thirdshift_end">
+  </div>
+    <div class="contract_times" ng-show="checkNull">
+  Begin of Fourth Shift  <input type="text" ng-model="time.fourthshift_begin">
+  </div>
+    <div class="contract_times" ng-show="checkNull">
+  End of Fourth Shift<input type="text" ng-model="time.fourthshift_end">
+  </div>
+
+</div>
+</div>
