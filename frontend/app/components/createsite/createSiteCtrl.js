@@ -13,7 +13,7 @@ $scope.showshifts1 = false;
     }
     // Opens subview from create days into create hours
     $scope.createhours = function(day) {
-        $scope.getDay = day;
+        createService.day = day;
         $state.go('hour');
     }
     // clears all of the clock info
@@ -31,9 +31,10 @@ $scope.showshifts1 = false;
         for (var prop in shift) {
             shift[prop] = (new Date(shift[prop])).getHours() + ':' + (new Date(shift[prop])).getMinutes()
         }
-        shift.contract_day = $scope.getDay;
+        shift.contract_day = createService.day;
         shift.siteId = createService.site;
         shift.site_id_fk = createService.site;
+
         $scope.addtoShifts(shift);
           };
 
@@ -48,6 +49,7 @@ $scope.showshifts1 = false;
     }
 
     $scope.addtoShifts = function(shift){
+      console.log(shift);
       createService.addtoShifts(shift);
       $state.go('createsitedays');
     }

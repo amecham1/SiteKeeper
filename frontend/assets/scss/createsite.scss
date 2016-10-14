@@ -1,98 +1,121 @@
-.site-box{
-  width: 100vw;
-  height: 100vh;
-  background-color: #EBE3DF;
+.site-box {
+    width: 100vw;
+    height: 100vh;
+    background-color: #EBE3DF;
 }
 
-
-
-.site-day{
-padding: 20px 0 0 5px;
-font-size: 2.5rem;
-color: #098491;
-
+.site-day {
+    padding: 20px 0 0 5px;
+    font-size: 2.5rem;
+    color: #098491;
 }
 
+.site-day-box {
+    margin: 30px auto 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    width: 50%;
+}
 
-.site-day-box{
-  margin: 30px auto 10px auto;
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
+.site-input {
+    margin: 30px auto 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    width: 50%;
+}
+
+.site-button-box {
   width: 50%;
-}
-
-.site-input{
-  margin: 30px auto 10px auto;
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
-  width: 50%;
-}
-.last-site{
-  margin-bottom: 10px;
-}
-
-.site-button{
-  display: inline-block;
-  width: 20px;
-  margin: 0 auto 0 auto;
-
-}
-
-
-// Create Hours Section
-
-.shift-hours{
-  width: 50%;
-  margin: 0 auto 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-content:space-between;
-  padding: 20px 0 20px 0;
-}
-.shift-box{
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
-}
-.shift-begin{
-  padding: 20px 10vw 10px 9vw;
-    display: inline-block;
-}
-.show-shifts{
-  width: 100%;
-
-  // display: flex;
-  // justify-content: space-around;
-  // // padding-left: 10px;
-  // margin-right: 10px
-}
-
-.hour-title{
-
-}
-.shift-title{
-  text-align: center;
-}
-.shift-layout{
-  width: 100%;
   display: flex;
   justify-content: space-around;
-  // padding-left: 10px;
-  margin-right: 10px
 }
-.shift-begin{
+ .next-button{
+  //  margin: 20px 10px 0 10px;
+ }
 
-}
-
-.shift-time{
-  // display: inline-block;
-  // margin-left:20px;
+.last-site {
+    margin-bottom: 10px;
 }
 
-.add-hours{
-  width: 20px;
-  height: 20px;
-  background-color: black;
+.site-button {
+    display: inline-block;
+    width: 20px;
+    margin: 0 auto;
+}
+// Create Hours Section
+.shift-hours {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    padding: 20px 0;
+}
+
+.shift-box {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.shift-begin {
+    padding: 0 10vw 10px 9vw;
+    display: inline-block;
+}
+
+.show-shifts {
+    width: 100%;
+    // display: flex;
+    // justify-content: space-around;
+    // // padding-left: 10px;
+    // margin-right: 10px
+}
+
+.hour-title {}
+
+.shift-title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.shift-layout {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    // padding-left: 10px;
+    margin-right: 10px;
+}
+
+.shift-begin {}
+
+.shift-time {
+    // display: inline-block;
+    // margin-left:20px;
+}
+.button-box {
+  position: absolute;
+  top: 10vh;
+  right: 0px;
+  // margin: 0 auto 0 auto;
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: center;
+  // justify-content: space-between;
+}
+
+.site-button {
+    text-align: center;
+    width: 20%;
+    padding: 20px 15px 20px 15px;
+    background-color: #C1D4D6;
+    border-radius: 10px
+}
+
+.hour-button{
+    margin: 15% 0 45px 0;
 }

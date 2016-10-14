@@ -1,6 +1,6 @@
 angular.module('keeperApp')
 .animation('.slide-down', function() {
-return {
+  return {
     enter: function(element, done) {
       TweenMax.from(element, 1, {opacity:0, y:50, onComplete:done})
     },

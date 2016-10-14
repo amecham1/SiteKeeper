@@ -17,11 +17,11 @@
     <input class='site-inputs' type="text" ng-model='site.contract_begin'>
     <div class="site-name">Contract End</div>
     <input class='site-inputs last-site' type="text" ng-model='site.contract_end'>
-    <div class='site-button site-cancel' ng-click='cancel()'>
-        Cancel
-    </div>
-    <div class='site-button site-submit' ng-click='next(site)'>
-        Next
+    <div class="next-button-box">
+
+        <div class='site-button next-button site-submit' ng-click='next(site)'>Next</div>
+    <div class='site-button next-button site-cancel' ng-click='cancel()'>Cancel</div>
+
     </div>
   </div>
   </div>

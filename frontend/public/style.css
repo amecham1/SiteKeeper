@@ -14,6 +14,10 @@
   .nav-bar {
     width: 21%;
   }
+  .title-dir {
+    width: 90%;
+    font-size: 4rem;
+  }
   .day {
     width: 45vw;
   }
@@ -28,7 +32,7 @@
     font-size: 4rem;
   }
   .day {
-    width: 15vw;
+    width: 17vw;
   }
 }
 
@@ -45,7 +49,7 @@
 }
 
 .site-day-box {
-  margin: 30px auto 10px auto;
+  margin: 30px auto 10px;
   display: flex;
   flex-direction: column;
   align-content: space-around;
@@ -53,11 +57,17 @@
 }
 
 .site-input {
-  margin: 30px auto 10px auto;
+  margin: 30px auto 10px;
   display: flex;
   flex-direction: column;
   align-content: space-around;
   width: 50%;
+}
+
+.site-button-box {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .last-site {
@@ -67,16 +77,16 @@
 .site-button {
   display: inline-block;
   width: 20px;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
 }
 
 .shift-hours {
   width: 50%;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-content: space-between;
-  padding: 20px 0 20px 0;
+  padding: 20px 0;
 }
 
 .shift-box {
@@ -86,7 +96,7 @@
 }
 
 .shift-begin {
-  padding: 20px 10vw 10px 9vw;
+  padding: 0 10vw 10px 9vw;
   display: inline-block;
 }
 
@@ -96,6 +106,7 @@
 
 .shift-title {
   text-align: center;
+  font-size: 2rem;
 }
 
 .shift-layout {
@@ -105,10 +116,28 @@
   margin-right: 10px;
 }
 
-.add-hours {
-  width: 20px;
-  height: 20px;
-  background-color: black;
+.button-box {
+  position: absolute;
+  top: 10vh;
+  right: 0px;
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: center;
+}
+
+.site-button {
+  text-align: center;
+  width: 20%;
+  padding: 20px 15px 20px 15px;
+  background-color: #C1D4D6;
+  border-radius: 10px;
+}
+
+.hour-button {
+  margin: 15% 0 45px 0;
 }
 
 .main-page {
@@ -132,10 +161,11 @@
 
 .title-dir {
   text-align: center;
-  width: 58%;
-  padding-top: 20px;
+  width: 80%;
+  padding-top: 30px;
+  padding-bottom: 20px;
   margin: 0 auto 0 auto;
-  font-size: 2rem;
+  font-size: 3.5rem;
   font-weight: 600;
   border-bottom: 1px #55CCD9 solid;
 }

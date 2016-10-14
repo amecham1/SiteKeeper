@@ -5,6 +5,7 @@ function createService($http, $q) {
     var siteId;
     this.shifts = [];
     this.site;
+    this.day;
     this.createsite = function(obj) {
         return $http({method: "POST", url: "/createsite", data: obj}).then(function(res) {
             siteId = res.data[0].site_id;
