@@ -3,21 +3,33 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-content: space-around;
-  background-image: url("../assets/img/squared_metal.png");
-  background-repeat: no-repeat;
-  background-size: contain;
+  align-content: center;
+  background-color: #EBE3DF
 }
-
 .signin-title{
   text-align: center;
-  font-size: 3.5rem;
-  padding: 100px 0 50px 0;
+  font-size: 4rem;
+  padding: 12vh 0 5vh 0;
+  font-weight: 600;
 }
 .signin-description{
   text-align: center;;
   font-size: 2rem;
-  padding: 50px 0 25px 0;
+  padding: 10px 0 10vh 10px;
+}
+.login-total{
+  margin: 0 auto 0 auto;
+  // transition: all linear 1s;
+  height: 25vh;
+}
+.ng-hide{
+  height: 0px;
+  // transition-timing-function: linear;
+  // transition-duration: 2s
+}
+.login-description{
+  padding: 0 0 0 20px;
+  font-size: 1.5rem;
 }
 .login-form{
   display: flex;
@@ -25,25 +37,21 @@
   align-content: space-around;
 }
 .login-input{
-  width: 50%;
+  width: 50vw;
   margin: 20px auto 20px auto;
   font-size: 1rem;
   padding: 10px 0 10px 0;
 }
+.login-button{
+  padding: 5vh 15vw 5vh 15vw;
+  margin: 20px auto 0 auto;
+  background-color:#C1D4D6;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
  .signin-button{
-   width: 25%;
-   margin: 25px auto 20px auto;
-   padding: 10px 5px 10px 5px;
-   font-size: .9rem;
- }
- .signup-link{
-   display: inline-block;
-   float: right;
-   padding: 30px 30px 0 0;
- }
- .register-link{
-   display:inline-block;
-   float: right;
-   padding: 30px 40px 0 0;
 
+  //  margin: 25px auto 20px auto;
+   padding: 20px 5px 20px 5px;
+   font-size: .9rem;
  }

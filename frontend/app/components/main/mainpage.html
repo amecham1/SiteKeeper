@@ -1,1 +1,15 @@
-<menu-directive></menu-directive>
+<div class="main-page">
+    <title-directive></title-directive>
+    <menu-directive></menu-directive>
+    <div class="welcome-user-box">
+    <div class="welcome-user roboto-text">
+      Welcome {{usersites.first_name}} {{usersites.last_name}},
+    </div>
+    <p class="you-are-assigned roboto-text">Your current work sites:</p>
+    <div class="sites-assigned roboto-text " ng-repeat="usite in usersites">
+
+
+    </div>
+    </div>
+
+</div>

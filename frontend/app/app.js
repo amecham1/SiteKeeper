@@ -25,7 +25,7 @@ angular.module('keeperApp', ['ui.router','ui.bootstrap','ngAnimate','satellizer'
       templateUrl: 'app/components/createsite/createsitedays.html',
       controller: 'createSiteCtrl'
     })
-    .state('createsitedays.hour',{
+    .state('hour',{
       url:'/hours',
       templateUrl:'app/components/createsite/createhours.html',
       controller: 'createSiteCtrl'

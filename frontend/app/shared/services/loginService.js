@@ -5,18 +5,11 @@ angular.module('keeperApp')
 function loginService($http){
 
 this.getLogin = function(login){
-  console.log(login,'service');
-  login = {
-    username: login.email,
-    password: login.password
-  }
-return $http({
-  method:"POST",
-  url:'/login',
-  data: login
-})
-
-
+  return $http({
+    method:"POST",
+    url:'/auth/login',
+    data: login
+  });
 }
 
 

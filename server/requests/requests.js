@@ -187,24 +187,27 @@ module.exports = {
         });
     },
 
-    // getUandP: function(username,password,done){
-    //   db.user_pass({email:username},function(err,user){
-    //     if(err){
-    //       console.log('username not given');
-    //       res.send(err);
-    //     }
-    //     if(!user){
-    //       return done(null,false,{message:"Incorrect username"});
-    //     }
-    //     if(user.password !== user.password){
-    //       // This is not secure, testing purposes only!!!!!!!!!
-    //       return done(null,false,{message: 'Incorrect password'});
-    //     }
-    //     else{
-    //         return done(null,user);
-    //     }
-    //   });
-    // }
+    getUserInfo: function(req,res){
+      db.user_info(req.params.id,function(err,user){
+        if(err)
+        {res.send(err);
+        }
+        else{
+          res.status(200).json(user);
+        }
+      });
+    },
+
+    getUserSites: function(req,res){
+      db.get_employees_sites(req.params.id,function(err,empSite){
+        if(err)
+        {res.send(err);
+        }
+        else{
+          res.status(200).json(empSite);
+        }
+      });
+    }
 
 
 

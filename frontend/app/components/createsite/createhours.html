@@ -1,42 +1,73 @@
-<div class="hour-box">
-<h4 class="hour-title">Add Hours</h4>
+<div class="site-box">
+<title-directive></title-directive>
+<menu-directive></menu-directive>
+<div class="shift-box">
+<div class="shift-hours" >
+  <h3 class="shift-title roboto-text" ng-click='pickShift(1)'>First Shift</h3>
 
-<div class="shift-hours">
-  <h3 class="shift-title">First Shift</h3>
-  <div class="shift-begin">Shift Begin</div>
-<div uib-timepicker class="shift-time" ng-model="shift.firstshift_begin"  show-spinners=false hour-step="hstep" minute-step="mstep" show-meridian=false></div>
-  <div class="shift-begin">Shift End</div>
-<div uib-timepicker class="shift-time" ng-model="shift.firstshift_end" ng-change="changed(beginshiftOne)" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
+<div class="show-shifts" ng-show="showshifts1">
+  <div class="shift-begin roboto-text">Shift Begin</div>
+    <div class="shift-begin roboto-text">Shift End</div>
+    <div class="shift-layout">
+<div uib-timepicker class="shift-time" ng-model="shift.firstshift_begin")  show-spinners=false hour-step="hstep" minute-step="mstep" mousewheel=false show-meridian=false></div>
+<div uib-timepicker class="shift-time" ng-model="shift.firstshift_end"  show-spinners=false hour-step=1 minute-step=15 mousewheel=false show-meridian=false></div>
+  </div>
+  </div>
+</div>
 
 
+<div class="shift-box">
+<div class="shift-hours" >
+  <h3 class="shift-title roboto-text" ng-click='pickShift(2)'>Second Shift</h3>
+
+<div class="show-shifts" ng-show="showshifts2">
+  <div class="shift-begin roboto-text">Shift Begin</div>
+    <div class="shift-begin roboto-text">Shift End</div>
+    <div class="shift-layout">
+<div uib-timepicker class="shift-time" ng-model="shift.secondshift_begin")  show-spinners=false hour-step="hstep" minute-step="mstep" mousewheel=false show-meridian=false></div>
+<div uib-timepicker class="shift-time" ng-model="shift.secondshift_end"  show-spinners=false hour-step=1 minute-step=15 mousewheel=false show-meridian=false></div>
+  </div>
+  </div>
 </div>
-<div class="shift-hours">
-  <h3 class="shift-title">Second Shift</h3>
-  <div class="shift-begin">Shift Begin</div>
-<div uib-timepicker class="shift-time" ng-model="shift.secondshift_begin" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
-  <div class="shift-begin">Shift End</div>
-<div uib-timepicker class="shift-time" ng-model="shift.secondshift_end" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
+
+
+<div class="shift-box">
+<div class="shift-hours" >
+  <h3 class="shift-title roboto-text" ng-click='pickShift(3)'>Third Shift</h3>
+
+<div class="show-shifts" ng-show="showshifts3">
+  <div class="shift-begin roboto-text">Shift Begin</div>
+    <div class="shift-begin roboto-text">Shift End</div>
+    <div class="shift-layout">
+<div uib-timepicker class="shift-time" ng-model="shift.thirdshift_begin")  show-spinners=false hour-step="hstep" minute-step="mstep" mousewheel=false show-meridian=false></div>
+<div uib-timepicker class="shift-time" ng-model="shift.thirdshift_end"  show-spinners=false hour-step=1 minute-step=15 mousewheel=false show-meridian=false></div>
+  </div>
+  </div>
 </div>
-<div class="shift-hours">
-  <h3 class="shift-title">Third Shift</h3>
-  <div class="shift-begin">Shift Begin</div>
-<div uib-timepicker class="shift-time" ng-model="shift.thirdshift_begin" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
-  <div class="shift-begin">Shift End</div>
-<div uib-timepicker class="shift-time" ng-model="shift.thirdshift_end" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
 </div>
-<div class="shift-hours">
-  <h3 class="shift-title">Fourth Shift</h3>
-  <div class="shift-begin">Shift Begin</div>
-<div uib-timepicker class="shift-time" ng-model="shift.fourthshift_begin" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
-  <div class="shift-begin">Shift End</div>
-<div uib-timepicker class="shift-time" ng-model="shift.fourthshift_end" ng-change="changed()" show-spinners=false hour-step=1 minute-step=15 show-meridian=false></div>
+
+
+<div class="shift-box">
+<div class="shift-hours" >
+  <h3 class="shift-title roboto-text" ng-click='pickShift(4)'>Fourth Shift</h3>
+
+<div class="show-shifts" ng-show="showshifts4">
+  <div class="shift-begin roboto-text">Shift Begin</div>
+    <div class="shift-begin roboto-text">Shift End</div>
+    <div class="shift-layout">
+<div uib-timepicker class="shift-time" ng-model="shift.fourthshift_begin")  show-spinners=false hour-step="hstep" minute-step="mstep" mousewheel=false show-meridian=false></div>
+<div uib-timepicker class="shift-time" ng-model="shift.fourthshift_end"  show-spinners=false hour-step=1 minute-step=15 mousewheel=false show-meridian=false></div>
+  </div>
+  </div>
 </div>
+</div>
+
+
 <div class="add-hours" ng-click="getMoreHours(shift)"></div>
 
-<button type="button" class="btn btn-danger" ng-click="clear()">Clear</button>
-  <button type="button" class="btn btn-success" ng-click="getTimes()">Submit</button>
+<div class="btn-submit" ng-click="clear()">Clear</div>
+<div class="btn-submit" ng-click="getTimes()">Submit</div>
 
-
-
-
+</div>
+</div>
 </div>

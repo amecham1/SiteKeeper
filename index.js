@@ -18,6 +18,19 @@ app.use(passport.initialize());
 app.use(passport.session());
 var massiveInstance = massive.connectSync({connectionString: connectionstring});
 
+passport.serializeUser(function(user, done) {
+  //console.log(user);
+  done(null, user);
+});
+
+passport.deserializeUser(function(user, done) {
+  db.find_by_id([user.user_id],function(err,user){
+    if(err){console.log('error in deserializeUser',err);}
+
+    else{done(null,user)};
+  });
+});
+
 app.set('db', massiveInstance);
 
 app.use(express.static(__dirname + '/frontend'));
@@ -27,15 +40,17 @@ var db = app.get('db');
 
 passport.use(new LocalStrategy(
   function(username,password,done){
-    db.user_pass({email:username},function(err,user){
+    db.user_pass([username],function(err,user){
+      user = user[0];
       if(err){
-        console.log('username not given');
-        res.send(err);
+        //console.log('username not given');
+        //console.log('error in LocalStrategy', err);
+        return done(err);
       }
       if(!user){
         return done(null,false,{message:"Incorrect username"});
       }
-      if(user.password !== user.password){
+      if(user.password !== password){
         // This is not secure, testing purposes only!!!!!!!!!
         return done(null,false,{message: 'Incorrect password'});
       }
@@ -45,6 +60,11 @@ passport.use(new LocalStrategy(
     });
   }
 ))
+
+function restrict(req, res, next) {
+  if(req.isUnauthenticated()) return res.status(403).json({message:'please login'});
+  next();
+}
 
 
 //Beginning of EndPoints
@@ -62,16 +82,23 @@ app.get('/scheduledays/:id', request.scheduleDays);
 app.get('/getsiteandhours/:id',request.getSiteandHours);
 // view the sites hours
 app.get('/schedulehours/:id', request.scheduleHours);
+// get employee sites
+app.get('/getUserInfo/:id',request.getUserInfo);
+
+app.post('/auth/login', passport.authenticate('local'), function(req, res) {
+// console.log(req.user);
+    res.status(200).json(req.user);
+
+});
+
+app.get('/auth/current', function(req, res) {
+  // console.log('req.user',req.session);
+  res.json(req.session);
+})
+
+// get User sites
+app.get('/getUserSites/:id',request.getUserSites);
 // create the first part of the site
-app.post('/login',
-  passport.authenticate('local', { successRedirect: '/mainpage',
-                                   failureRedirect: '/'
-                                    })
-);
-
-
-
-
 app.post('/createsite', request.createSite);
 // create the second part of the site
 app.post('/createdayandhours',request.createDayandHours);

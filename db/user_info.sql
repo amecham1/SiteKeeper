@@ -1,2 +1,2 @@
 SELECT * FROM employee
-WHERE email = $1
+WHERE user_id = $1

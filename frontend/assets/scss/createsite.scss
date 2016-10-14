@@ -1,15 +1,29 @@
-.site-title{
-  font-size: 3rem;
-  text-align: center;
-  padding-top: 20px;
+.site-box{
+  width: 100vw;
+  height: 100vh;
+  background-color: #EBE3DF;
 }
 
-.site-name{
+
+
+.site-day{
 padding: 20px 0 0 5px;
+font-size: 2.5rem;
+color: #098491;
+
+}
+
+
+.site-day-box{
+  margin: 30px auto 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  width: 50%;
 }
 
 .site-input{
-  margin: 10px auto 10px auto;
+  margin: 30px auto 10px auto;
   display: flex;
   flex-direction: column;
   align-content: space-around;
@@ -26,32 +40,55 @@ padding: 20px 0 0 5px;
 
 }
 
-// Create Days Section
-
-.day-input{
-  margin: 50px auto 10px auto;
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
-}
 
 // Create Hours Section
 
-.hour-box{
+.shift-hours{
   width: 50%;
-  margin: 100px auto 0 auto;
+  margin: 0 auto 0 auto;
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-content:space-between;
+  padding: 20px 0 20px 0;
+}
+.shift-box{
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+.shift-begin{
+  padding: 20px 10vw 10px 9vw;
+    display: inline-block;
+}
+.show-shifts{
+  width: 100%;
+
+  // display: flex;
+  // justify-content: space-around;
+  // // padding-left: 10px;
+  // margin-right: 10px
 }
 
 .hour-title{
 
 }
+.shift-title{
+  text-align: center;
+}
+.shift-layout{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  // padding-left: 10px;
+  margin-right: 10px
+}
+.shift-begin{
+
+}
 
 .shift-time{
-  display: inline-block;
-  margin-left:20px;
+  // display: inline-block;
+  // margin-left:20px;
 }
 
 .add-hours{
