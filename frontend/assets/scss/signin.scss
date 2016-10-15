@@ -22,11 +22,7 @@
   // transition: all linear 1s;
   height: 25vh;
 }
-.ng-hide{
-  height: 0px;
-  // transition-timing-function: linear;
-  // transition-duration: 2s
-}
+
 .login-description{
   padding: 0 0 0 20px;
   font-size: 1.5rem;
@@ -44,14 +40,14 @@
 }
 .login-button{
   padding: 5vh 15vw 5vh 15vw;
-  margin: 20px auto 0 auto;
+  margin: 70px auto 0 auto;
   background-color:#C1D4D6;
   font-size: 1.5rem;
   font-weight: bold;
 }
- .signin-button{
-
-  //  margin: 25px auto 20px auto;
-   padding: 20px 5px 20px 5px;
-   font-size: .9rem;
- }
+ // .signin-button{
+ //
+ //  //  margin: 25px auto 20px auto;
+ //   padding: 20px 5px 20px 5px;
+ //   font-size: .9rem;
+ // }

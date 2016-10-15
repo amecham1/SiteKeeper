@@ -10,6 +10,20 @@
   font-style: italic;
 }
 
+.site-box {
+  width: 100vw;
+  height: 100vh;
+  background-color: #EBE3DF;
+}
+
+.site-button {
+  text-align: center;
+  width: 20%;
+  padding: 20px 15px 20px 15px;
+  background-color: #C1D4D6;
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 768px) {
   .nav-bar {
     width: 21%;
@@ -36,24 +50,33 @@
   }
 }
 
-.site-box {
-  width: 100vw;
-  height: 100vh;
-  background-color: #EBE3DF;
+.site-day-box {
+  margin: 16vh auto 10vh auto;
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.staggering-box {
+  margin: 0 15vw 0 15vw;
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
 }
 
 .site-day {
-  padding: 20px 0 0 5px;
+  margin: 0 0 0 0;
+  padding: 20px 0 0 20px;
   font-size: 2.5rem;
   color: #098491;
 }
 
-.site-day-box {
-  margin: 30px auto 10px;
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
-  width: 50%;
+#last-day {
+  padding: 20px 0 70px 0;
+}
+
+.create-site {
+  overflow: scroll;
 }
 
 .site-input {
@@ -64,20 +87,37 @@
   width: 50%;
 }
 
-.site-button-box {
-  width: 50%;
+.site-name {
+  font-size: 1.5rem;
+  padding: 5px 0 5px 0;
+}
+
+.site-inputs {
+  padding: 10px 0 10px 0;
+  border-radius: 10px;
+}
+
+.next-button-box {
+  position: absolute;
+  top: 25vh;
+  right: -50px;
+  width: 40%;
+  height: 50%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: center;
 }
 
-.last-site {
-  margin-bottom: 10px;
+.next-button {
+  margin: 15% 0 15% 0;
 }
 
-.site-button {
-  display: inline-block;
-  width: 20px;
-  margin: 0 auto;
+
+.shift-box {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
 }
 
 .shift-hours {
@@ -89,10 +129,13 @@
   padding: 20px 0;
 }
 
-.shift-box {
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
+.shift-title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.show-shifts {
+  width: 100%;
 }
 
 .shift-begin {
@@ -100,13 +143,14 @@
   display: inline-block;
 }
 
-.show-shifts {
-  width: 100%;
+.site-button-box {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
 }
 
-.shift-title {
-  text-align: center;
-  font-size: 2rem;
+.last-site {
+  margin-bottom: 10px;
 }
 
 .shift-layout {
@@ -126,14 +170,6 @@
   flex-direction: column;
   align-content: space-between;
   align-items: center;
-}
-
-.site-button {
-  text-align: center;
-  width: 20%;
-  padding: 20px 15px 20px 15px;
-  background-color: #C1D4D6;
-  border-radius: 10px;
 }
 
 .hour-button {
@@ -250,28 +286,23 @@ table {
   border-spacing: 0;
 }
 
-.schedule-title {
-  margin-top: 30px;
-  text-align: center;
-  font-size: 3rem;
-  color: blue;
-}
-
 .schedule-box {
   margin: 15px auto 0 auto;
   width: 70%;
 }
 
 .schedule-search {
+  width: 40%;
   float: right;
-  margin: 20px 30px 0 0;
+  padding: 10px 0 10px 0;
+  margin: 50px 40px 0 0;
+  font-size: 1.3rem;
 }
 
 .schedule-results-box {
   width: 100%;
-  background-color: papayawhip;
-  height: 85vh;
-  padding-top: 75px;
+  height: 65vh;
+  padding-top: 40px;
   overflow: scroll;
 }
 
@@ -279,7 +310,7 @@ table {
   margin: 0 auto 20px auto;
   width: 80%;
   height: 15vh;
-  background-color: peru;
+  background-color: #C1D4D6;
   color: black;
 }
 
@@ -310,10 +341,6 @@ table {
   height: 25vh;
 }
 
-.ng-hide {
-  height: 0px;
-}
-
 .login-description {
   padding: 0 0 0 20px;
   font-size: 1.5rem;
@@ -334,15 +361,10 @@ table {
 
 .login-button {
   padding: 5vh 15vw 5vh 15vw;
-  margin: 20px auto 0 auto;
+  margin: 70px auto 0 auto;
   background-color: #C1D4D6;
   font-size: 1.5rem;
   font-weight: bold;
-}
-
-.signin-button {
-  padding: 20px 5px 20px 5px;
-  font-size: .9rem;
 }
 
 .update-container {

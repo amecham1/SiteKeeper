@@ -1,31 +1,32 @@
-<h3 class='site-title'>Create Employee</h3>
+<div class="site-box">
+    <title-directive></title-directive>
+    <menu-directive></menu-directive>
 
-<menu-directive></menu-directive>
+    <div class="site-input">
 
-<div class="site-input">
+        <div class="site-name roboto-text">First Name</div>
+        <input class='site-inputs' type="text" ng-model='employee.first_name' placeholder="">
 
-    <div class="site-name">First Name</div>
-    <input class='site-inputs' type="text" ng-model='employee.first_name' placeholder="">
+        <div class="site-name roboto-text">Last Name</div>
+        <input class='site-inputs' type="text" ng-model='employee.last_name' placeholder="">
 
-    <div class="site-name">Last Name</div>
-    <input class='site-inputs' type="text" ng-model='employee.last_name' placeholder="">
-
-    <div class="site-name">Admin</div>
-    <select class="site-inputs" name="Admin" ng-model='employee.admin'>
+        <div class="site-name roboto-text">Admin</div>
+        <select class="site-inputs" name="Admin" ng-model='employee.admin'>
     <option value=true>Yes</option>
     <option value=false>No</option>
     </select>
 
-    <div class="site-name">Email</div>
-    <input class"site-inputs" type="text" ng-model="employee.email">
+        <div class="site-name roboto-text">Email</div>
+        <input class "site-inputs" type="text" ng-model="employee.email">
 
-    <div class="site-name">Password</div>
-    <input class"site-inputs last-site" type="text" ng-model="employee.password" value="">
+        <div class="site-name roboto-text">Password</div>
+        <input class "site-inputs last-site" type="text" ng-model="employee.password" value="">
 
-<div class='site-button site-cancel' ng-click='cancel()'>
-    Cancel
-</div>
-<div class='site-button site-submit' ng-click='createEmployee(employee)'>
-    Submit
-</div>
+        <div class='site-button roboto-text site-cancel' ng-click='cancel()'>
+            Cancel
+        </div>
+        <div class='site-button roboto-text site-submit' ng-click='createEmployee(employee)'>
+            Submit
+        </div>
+    </div>
 </div>

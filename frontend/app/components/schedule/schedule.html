@@ -1,10 +1,12 @@
+<div class="site-box">
+<title-directive></title-directive>
 <menu-directive></menu-directive>
-<h3 class="schedule-title">List of sites</h3>
+
 <div class="schedule-box">
-  <input class="schedule-search" type="text">
+  <input class="schedule-search roboto-text" ng-model="nameFilter" type="text" placeholder="Search by name">
     <div class="schedule-results-box" >
 
-      <div class="schedule-results-actual" ng-show="showSites" ng-repeat="siteview in siteoverview" ng-click='scheduleShift(siteview)'>
+      <div class="schedule-results-actual" ng-show="showSites" ng-repeat="siteview in siteoverview | filter:nameFilter" ng-click='scheduleShift(siteview)'>
         {{siteview.name}}
           <br>
         {{siteview.address_street}}
@@ -20,4 +22,5 @@
   <ui-view></ui-view>
 
     </div>
+</div>
 </div>
