@@ -14,7 +14,7 @@ function updateSiteCtrl($scope, updateService, $state) {
 
     $scope.updateSite = function(siteview) {
       console.log(siteview.site_id);
-     updateService.getSiteId(siteview.site_id);
+    //  updateService.getSiteId(siteview.site_id);
         // console.log(updateService.siteView);
         $state.go('updatefullsite');
   };

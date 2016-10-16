@@ -3,15 +3,15 @@ angular.module('keeperApp')
 
 function updateService($http){
 
-this.siteView;
-
-this.getSiteId = function(val){
-  console.log(val);
-  return this.siteView = val;
-}
-
-  // this.siteView = val;
-  console.log(this.siteView);
+// this.siteView;
+//
+// this.getSiteId = function(val){
+//   console.log(val);
+//   return val;
+// }
+//
+//   // this.siteView = val;
+//   console.log(this.siteView);
 
 this.updateSite = function(){
   return $http({

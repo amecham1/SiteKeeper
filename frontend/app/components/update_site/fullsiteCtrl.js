@@ -3,16 +3,8 @@ angular.module('keeperApp').controller('fullsiteCtrl', fullsiteCtrl);
 function fullsiteCtrl($scope, updateService, $state,$filter) {
 
 
-  var checkId = function(val){
-    if(!val){
-      val = val;
-      return val
-    }
-
-  }
-console.log(updateService.siteView);
-    updateService.allSiteInfo(updateService.siteView).then(function(res) {
-        // console.log(res.data);
+    updateService.allSiteInfo(25).then(function(res) {
+        console.log(res.data);
         $scope.siteupdate = res.data.site[0];
         $scope.begintimechange = res.data.site[0].contract_begin;
         $scope.endtimechange = res.data.site[0].contract_end;
@@ -20,6 +12,7 @@ console.log(updateService.siteView);
         $scope.siteupdate.contract_end = $filter('date')($scope.endtimechange);
         // $scope.checkForNull = res.data.hoursandsite;
         // console.log($scope.checkForNull);
+        console.log(res.data.hoursandsite);
         $scope.times = res.data.hoursandsite;
     });
 
