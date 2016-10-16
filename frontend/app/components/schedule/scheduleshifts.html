@@ -1,39 +1,46 @@
 
+<div class="site-box">
+<title-directive></title-directive>
+<menu-directive></menu-directive>
 
-
-<div class="schedule-hours" ng-repeat="shift in shifts track by $index">
+<div class=" main-box-shifts">
+<div class="schedule-hours roboto-text" ng-repeat="shift in shifts">
 <br>
 <br>
-  {{shift.contract_day}}
+  <div class="shift-contract-day">{{shift.contract_day}}</div>
   <br>
+  <div class="schedule-shift-box">
   <br>
-  <div class="shift-box">
-  <div class="contract-day-shift" ng-model="shifts.contract_time_id">Morning Shift:</div>
-  <input type="checkbox" name="First Shift" ng-click="addShiftNum(shift.contract_time_id, shiftNum1)" ng-model="shiftNum1"ng-true-value="1" ng-false-value="null">
+  <div class="contract-day-shift" ng-model="shifts.contract_time_id">Morning Shift:
+  <input type="checkbox" name="First Shift" ng-click="addShiftNum(shift.contract_time_id, shiftNum1)" ng-model="shiftNum1" ng-true-value="1" ng-false-value="null"></div>
+<br>
 {{shift.firstshift_begin}}
 {{shift.firstshift_end}}
 
 </div>
 <br>
-<div class="shift-box">
-  <div class="contract-day-shift" ng-model="shifts.contract_time_id">Day Shift:</div>
-  <input type="checkbox" name="Second Shift"  ng-click="addShiftNum(shift.contract_time_id, shiftNum2)" ng-model="shiftNum2" ng-true-value="2" ng-false-value="null">
+<div class="schedule-shift-box">
+  <div class="contract-day-shift" ng-model="shifts.contract_time_id">Day Shift:
+  <input type="checkbox" name="Second Shift"  ng-click="addShiftNum(shift.contract_time_id, shiftNum2)" ng-model="shiftNum2" ng-true-value="2" ng-false-value="null"></div>
+<br>
 {{shift.secondshift_begin}}
 {{shift.secondshift_end}}
 
 </div>
 <br>
-<div class="shift-box">
-  <div class="contract-day-shift" ng-model="shifts.contract_time_id">Afternoon Shift:</div>
-  <input type="checkbox" name="Third Shift" ng-click="addShiftNum(shift.contract_time_id, shiftNum3)" ng-model="shiftNum3" ng-true-value="3" ng-false-value="null">
+<div class="schedule-shift-box">
+  <div class="contract-day-shift" ng-model="shifts.contract_time_id">Afternoon Shift:
+  <input type="checkbox" name="Third Shift" ng-click="addShiftNum(shift.contract_time_id, shiftNum3)" ng-model="shiftNum3" ng-true-value="3" ng-false-value="null"></div>
+<br>
 {{shift.thirdshift_begin}}
 {{shift.thirdshift_end}}
 
 </div>
 <br>
-<div class="shift-box">
-  <div class="contract-day-shift" ng-model="shifts.contract_time_id">Grave Shift:</div>
-  <input type="checkbox" name="Fourth Shift" ng-click="addShiftNum(shift.contract_time_id, shiftNum4)" ng-model="shiftNum4" ng-true-value="4" ng-false-value="null">
+<div class="schedule-shift-box">
+  <div class="contract-day-shift" ng-model="shifts.contract_time_id">Grave Shift:
+  <input type="checkbox" name="Fourth Shift" ng-click="addShiftNum(shift.contract_time_id, shiftNum4)" ng-model="shiftNum4" ng-true-value="4" ng-false-value="null"></div>
+<br>
 {{shift.fourthshift_begin}}
 {{shift.fourthshift_end}}
 </div>
@@ -41,4 +48,6 @@
 <!-- </div> -->
 </div>
 
-<div class="post-employee-shifts" ng-click="submitEmpShifts(shifts)">Submit</div>
+</div>
+<div class="post-employee-shifts site-button" ng-click="submitEmpShifts(shifts)">Submit</div>
+</div>

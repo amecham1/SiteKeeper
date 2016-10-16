@@ -2,7 +2,7 @@ angular.module('keeperApp')
 .service('overviewService',overviewService)
 
 function overviewService($http){
-
+this.idNumVar = 2
 this.overViewSites = function(){
   return $http({
     method:"GET",

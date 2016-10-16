@@ -45,20 +45,20 @@ angular.module('keeperApp', ['ui.router','ui.bootstrap','ngAnimate','satellizer'
       templateUrl:'app/components/schedule/schedule.html',
       controller:'scheduleCtrl'
     })
-    .state('schedule.selectshift',{
+    .state('selectshift',{
       url:'/scheduleshifts',
       templateUrl:'app/components/schedule/scheduleshifts.html',
-      controller:'scheduleCtrl'
+      controller:'schedulehoursCtrl'
     })
     .state('updatesite',{
       url:'/updatesite',
       templateUrl:'app/components/update_site/update_site.html',
       controller:'updateSiteCtrl'
     })
-    .state('updatesite.updatefullsite',{
+    .state('updatefullsite',{
       url:'/fullsiteupdate',
       templateUrl:'app/components/update_site/update_fullsite.html',
-      controller:'updateSiteCtrl'
+      controller:'fullsiteCtrl'
     })
     .state('showemployee',{
       url:'/viewemployee',

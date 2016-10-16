@@ -3,10 +3,12 @@
 <menu-directive></menu-directive>
 
 <div class="schedule-box">
+  <h3>hello</h3>
+  <ui-view></ui-view>
   <input class="schedule-search roboto-text" ng-model="nameFilter" type="text" placeholder="Search by name">
     <div class="schedule-results-box" >
 
-      <div class="schedule-results-actual" ng-show="showSites" ng-repeat="siteview in siteoverview | filter:nameFilter" ng-click='scheduleShift(siteview)'>
+      <div class="schedule-results-actual" ng-repeat="siteview in siteoverview | filter:nameFilter" ng-click="scheduleShift(siteview)">
         {{siteview.name}}
           <br>
         {{siteview.address_street}}
@@ -19,8 +21,10 @@
         {{siteview.contract_begin | date: 'shortDate'}}
         {{siteview.contract_end | date: 'shortDate'}}
       </div>
-  <ui-view></ui-view>
 
+  <!-- <ui-view></ui-view> -->
     </div>
+
 </div>
+
 </div>

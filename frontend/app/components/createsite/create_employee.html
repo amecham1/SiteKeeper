@@ -11,22 +11,23 @@
         <input class='site-inputs' type="text" ng-model='employee.last_name' placeholder="">
 
         <div class="site-name roboto-text">Admin</div>
-        <select class="site-inputs" name="Admin" ng-model='employee.admin'>
+        <select class="site-inputs roboto-text" name="Admin" ng-model='employee.admin'>
     <option value=true>Yes</option>
     <option value=false>No</option>
     </select>
 
         <div class="site-name roboto-text">Email</div>
-        <input class "site-inputs" type="text" ng-model="employee.email">
+        <input class="site-inputs roboto-text" type="text" ng-model="employee.email">
 
         <div class="site-name roboto-text">Password</div>
-        <input class "site-inputs last-site" type="text" ng-model="employee.password" value="">
-
+        <input class="site-inputs last-site roboto-text" type="text" ng-model="employee.password" value="">
+<div class="employee-button-box">
+        <div class='site-button roboto-text site-submit' ng-click='createEmployee(employee)'>
+            Submit
+        </div>
         <div class='site-button roboto-text site-cancel' ng-click='cancel()'>
             Cancel
         </div>
-        <div class='site-button roboto-text site-submit' ng-click='createEmployee(employee)'>
-            Submit
         </div>
     </div>
 </div>

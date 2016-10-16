@@ -113,6 +113,12 @@
   margin: 15% 0 15% 0;
 }
 
+.employee-button-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0 0 0;
+}
 
 .shift-box {
   display: flex;
@@ -314,6 +320,47 @@ table {
   color: black;
 }
 
+.main-box-shifts {
+  margin: 0 auto 0 auto;
+  width: 70%;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  overflow: scroll;
+}
+
+.schedule-hours {
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.schedule-shift-box {
+  width: 40%;
+}
+
+.shift-contract-day {
+  width: 70%;
+  font-size: 2.5rem;
+  color: #098491;
+  border-bottom: 1px solid #4C5657;
+  margin-right: 5px;
+}
+
+.post-employee-shifts {
+  width: 20%;
+  position: absolute;
+  top: 5vh;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  transform: scale(2, 2);
+}
+
 .signin-box {
   width: 100vw;
   height: 100vh;
@@ -401,13 +448,15 @@ table {
 .update-site-box {
   width: 60vw;
   height: 75vh;
-  background-color: papayawhip;
   margin-top: 20px;
+  overflow: scroll;
 }
 
 .update-site-results {
   width: 60vw;
-  height: 20vh;
-  background-color: peru;
-  margin: 20px 0 10px 0;
+  height: 16vh;
+  padding: 10px 0 10px 0;
+  font-size: 1.5rem;
+  color: #098491;
+  border-bottom: 1px solid #4C5657;
 }
