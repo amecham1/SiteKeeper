@@ -2,9 +2,9 @@ angular.module('keeperApp').controller('schedulehoursCtrl', schedulehoursCtrl)
 
 function schedulehoursCtrl($scope, overviewService, $state) {
 
-
-    overviewService.showHours(overviewService.idNumVar).then(function(res) {
-      console.log(overviewService.idNumVar);
+var selectedShiftId = overviewService.getSiteId()
+console.log(selectedShiftId);
+    overviewService.showHours(selectedShiftId).then(function(res) {
         $scope.hours = res.data;
         $scope.shifts = res.data;
 

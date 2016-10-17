@@ -62,12 +62,12 @@ angular.module('keeperApp', ['ui.router','ui.bootstrap','ngAnimate','satellizer'
     })
     .state('showemployee',{
       url:'/viewemployee',
-      templateUrl:'app/components/update_site/view_employee.html',
+      templateUrl:'app/components/update_employee/view_employee.html',
       controller:'empupdateCtrl'
     })
     .state('updateemployee',{
       url:'/updateemployee',
-      templateUrl:'app/components/update_site/update_employee.html',
+      templateUrl:'app/components/update_employee/update_employee.html',
       controller: 'fullempupdateCtrl'
     })
     .state('requestchange',{

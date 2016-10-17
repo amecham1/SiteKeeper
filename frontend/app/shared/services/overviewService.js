@@ -3,11 +3,18 @@ angular.module('keeperApp')
 
 function overviewService($http){
 
-this.idNumVar = function(val){
-  if(val){
+var selectedShiftId ={};
 
-  }
-};
+if(localStorage.getItem("selectedShiftId")){
+selectedShiftId = JSON.parse(localStorage.getItem("selectedShiftId"));
+}
+this.getSiteId = function(){
+  return selectedShiftId;
+}
+this.setSiteId = function(data){
+  selectedShiftId = data;
+  localStorage.setItem("selectedShiftId",JSON.stringify(selectedShiftId));
+}
 
 console.log(this.idNumVar);
 

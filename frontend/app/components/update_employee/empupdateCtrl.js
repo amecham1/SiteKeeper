@@ -12,6 +12,11 @@ function empupdateCtrl($scope,updateService,$state){
     $scope.employee = emp.data;
   });
 
+  $scope.updateEmp = function(data){
+    updateService.setEmpId(data);
+    $state.go('updateemployee');
+  };
+
 
 
 

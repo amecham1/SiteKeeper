@@ -13,8 +13,10 @@ function updateSiteCtrl($scope, updateService, $state) {
     // $scope.checkNull = true;
 
     $scope.updateSite = function(siteview) {
-      updateService.getSiteview = siteview;
-      console.log(siteview);
+        console.log(siteview);
+      updateService.selectedSiteId = siteview.site_id;
+      updateService.setSiteId(siteview.site_id);
+
     //  updateService.showHours(siteview.site_id);
         // console.log(updateService.siteView);
         $state.go('updatefullsite');

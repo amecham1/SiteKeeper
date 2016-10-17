@@ -12,9 +12,10 @@ function scheduleCtrl($scope, overviewService, $state) {
     });
     // function will hide sites and then bring in site info
     $scope.scheduleShift = function(idNum) {
-      overviewService.idNumVar(idNum.site_id);
+      console.log(idNum.site_id);
+      // overviewService.idNumVar(idNum.site_id);
       // console.log(idNum.site_id);
-      overviewService.idNumVar = idNum.site_id;
+      overviewService.setSiteId(idNum.site_id);
       $state.go('selectshift')
     }
 
