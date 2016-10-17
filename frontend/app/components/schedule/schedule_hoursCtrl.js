@@ -2,6 +2,7 @@ angular.module('keeperApp').controller('schedulehoursCtrl', schedulehoursCtrl)
 
 function schedulehoursCtrl($scope, overviewService, $state) {
 
+
     overviewService.showHours(overviewService.idNumVar).then(function(res) {
       console.log(overviewService.idNumVar);
         $scope.hours = res.data;
@@ -11,10 +12,10 @@ function schedulehoursCtrl($scope, overviewService, $state) {
 
     var selectedShifts = [];
     $scope.addShiftNum = function(contractId, shiftNum) {
-      console.log(contractId,'contractId');
-      console.log(shiftNum,'shiftNum');
+      // console.log(contractId,'contractId');
+      // console.log(shiftNum,'shiftNum');
         overviewService.getUserId().then(function(res) {
-          console.log(res, 'getUserId');
+          // console.log(res, 'getUserId');
             var empId = res.data.passport.user.user_id;
             if (shiftNum) {
                 selectedShifts.push({shift_num: shiftNum, contract_time_fk: contractId, site_id_fk: $scope.shifts[0].site_id_fk, user_id_fk: empId})

@@ -258,11 +258,17 @@
 }
 
 .welcome-user {
-  padding: 10px 5px 20px 5px;
+  font-size: 2rem;
+  padding: 30px 5px 20px 5px;
 }
 
 .you-are-assigned {
+  font-size: 1.5rem;
   padding: 10px 5px 20px 5px;
+}
+
+.sites-assigned {
+  font-size: 1.3rem;
 }
 
 .title-dir {
