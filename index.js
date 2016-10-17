@@ -5,7 +5,7 @@ const cors = require('cors');
 const massive = require('massive');
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy;
-const config = require('./server/config/config.json');
+const config = require('./server_config.js');
 var connectionstring = config.connectionString;
 
 var app = express();
@@ -131,3 +131,4 @@ app.put('/updateemployee/:id', request.updateEmployee);
 app.listen(config.port, function() {
     console.log('listening on port', config.port);
 })
+
