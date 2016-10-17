@@ -8,4 +8,4 @@ SET firstshift_begin = $1,
     fourthshift_begin = $7,
     fourthshift_end = $8,
     contract_day = $9
-WHERE contract_time_id = $10
+WHERE contract_time_id = $10;

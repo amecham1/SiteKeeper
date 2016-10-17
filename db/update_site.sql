@@ -6,4 +6,4 @@ SET name = $1,
     site_info = $5,
     contract_begin = $6,
     contract_end = $7
-WHERE site_id = $8
+WHERE site_id = $8;

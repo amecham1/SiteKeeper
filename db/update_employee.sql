@@ -5,4 +5,4 @@ SET first_name = $1,
     email = $4,
     password = $5
 
-WHERE user_id = $6
+WHERE user_id = $6;
