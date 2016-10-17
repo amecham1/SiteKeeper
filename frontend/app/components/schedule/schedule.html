@@ -7,7 +7,7 @@
   <input class="schedule-search roboto-text" ng-model="nameFilter" type="text" placeholder="Search by name">
     <div class="schedule-results-box" >
 
-      <div class="schedule-results-actual" ng-repeat="siteview in siteoverview | filter:nameFilter" ng-click="scheduleShift(siteview)">
+      <div class="schedule-results-actual roboto-text" ng-repeat="siteview in siteoverview | filter:nameFilter" ng-click="scheduleShift(siteview)">
         {{siteview.name}}
           <br>
         {{siteview.address_street}}
@@ -16,9 +16,11 @@
         <br>
         {{siteview.address_state}}
         <br>
+
         <!-- {{siteview.contract_day}} -->
         {{siteview.contract_begin | date: 'shortDate'}}
         {{siteview.contract_end | date: 'shortDate'}}
+        <br>
       </div>
 
   <!-- <ui-view></ui-view> -->
