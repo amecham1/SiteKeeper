@@ -1,25 +1,25 @@
-<div class="update-container" ng-show="showupdate">
-<h3 class='update-title'>Update Site</h3>
+<div class="site-box">
+<title-directive></title-directive>
+<menu-directive></menu-directive>
+<div class="update-container">
+
 <div class="input-box">
-    <input class='update-input' type="text" ng-model='siteFinder' placeholder="Find Site">
-    <div class="search-icon">
-        <img src="assets/img/searchglass.png" alt="searchglass" />
-    </div>
+    <input class="update-input roboto-text" type="text" ng-model="siteFinder" placeholder="Find Site">
 </div>
 <div class="update-site-box">
-    <div class="update-site-results" ng-repeat="site in updatesites" ng-click="updateSite(site)">
-    Name:{{site.name}} <br>
-    Address: {{site.address_street}}
-              {{site.address_city}}
+    <div class="update-site-results roboto-text" ng-repeat="site in updatesites |filter:siteFinder" ng-click="updateSite(site)">
+    Name: {{site.name}} <br>
+    Address: {{site.address_street}},
+              {{site.address_city}},
               {{site.address_state}}
+              <br>
     Contract Begins: {{site.contract_begin | date: 'shortDate'}}
+    <br>
     Contract Ends: {{site.contract_end | date: 'shortDate'}}
-
     </div>
 </div>
+</div>
+
 </div>
 
 <ui-view></ui-view>
-
-
-<menu-directive></menu-directive>

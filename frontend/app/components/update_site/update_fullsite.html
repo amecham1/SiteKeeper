@@ -1,41 +1,47 @@
-<div class="update-container">
-<input type="text" class="update-title" ng-model="siteupdate.name">
-<div class="update-address">
-  <input type="text" ng-model="siteupdate.address_street">
-  <input type="text" ng-model="siteupdate.address_city">
-  <input type="text" ng-model="siteupdate.address_state">
+<div class="site-box">
+  <title-directive></title-directive>
+  <menu-directive></menu-directive>
+<div class="update-container-hours ">
+<input type="text" class="update-title-hours roboto-text input-font" ng-model="siteupdate.name">
+<div class="update-address-box roboto-text">
+  Address:<input type="text" class="roboto-text input-font" ng-model="siteupdate.address_street">
+  <input type="text" class="roboto-text input-font" ng-model="siteupdate.address_city">
+  <input type="text" class="roboto-text input-font" ng-model="siteupdate.address_state">
 </div>
-<div class="contract-start-end">
-  <input type="text" ng-model="siteupdate.contract_begin">
-  <input type="text" ng-model="siteupdate.contract_end">
+<div class="contract-start-end roboto-text">
+  <br>
+  Begin Shift<input type="text" class="roboto-text input-font" ng-model="siteupdate.contract_begin">
+  End Shift<input type="text" class="roboto-text input-font" ng-model="siteupdate.contract_end">
 </div>
-<div class="hours-update" ng-repeat="time in times">
-  <input type="text" ng-model="time.contract_day">
-  <div class="contract-times" ng-show="checkNull">
-  Begin of First Shift  <input type="text" ng-model="time.firstshift_begin">
+<div class="hours-update-box">
+<div class="hours-update roboto-text" ng-repeat="time in times">
+  <input type="text" class=" input-day roboto-text input-font" ng-model="time.contract_day">
+  <div class="contract-times">
+  Begin of First Shift  <input type="text" class="roboto-text input-font" ng-model="time.firstshift_begin">
   </div>
-  <div class="contract_times" ng-show="checkNull">
-  End of First Shift  <input type="text" ng-model="time.firstshift_end">
+  <div class="contract_times">
+  End of First Shift  <input type="text" class="roboto-text input-font" ng-model="time.firstshift_end">
   </div>
-    <div class="contract_times" ng-show="checkNull">
-  Begin of Second Shift  <input type="text" ng-model="time.secondshift_begin">
+    <div class="contract_times">
+  Begin of Second Shift  <input type="text" class="roboto-text input-font" ng-model="time.secondshift_begin">
   </div>
-    <div class="contract_times" ng-show="checkNull">
-  End of Second Shift<input type="text" ng-model="time.secondshift_end">
+    <div class="contract_times">
+  End of Second Shift<input type="text" class="roboto-text input-font" ng-model="time.secondshift_end">
   </div>
-    <div class="contract_times" ng-show="checkNull">
-  Begin of Third Shift  <input type="text" ng-model="time.thirdshift_begin">
+    <div class="contract_times">
+  Begin of Third Shift  <input type="text" class="roboto-text input-font" ng-model="time.thirdshift_begin">
   </div>
-    <div class="contract_times" ng-show="checkNull">
-  End of Third Shift  <input type="text" ng-model="time.thirdshift_end">
+    <div class="contract_times">
+  End of Third Shift  <input type="text" class="roboto-text input-font" ng-model="time.thirdshift_end">
   </div>
-    <div class="contract_times" ng-show="checkNull">
-  Begin of Fourth Shift  <input type="text" ng-model="time.fourthshift_begin">
+    <div class="contract_times">
+  Begin of Fourth Shift  <input type="text" class="roboto-text input-font" ng-model="time.fourthshift_begin">
   </div>
-    <div class="contract_times" ng-show="checkNull">
-  End of Fourth Shift<input type="text" ng-model="time.fourthshift_end">
+    <div class="contract_times">
+  End of Fourth Shift<input type="text" class="roboto-text input-font" ng-model="time.fourthshift_end">
   </div>
-
 </div>
-<div class="submit-site" ng-click="submitUpdate(siteupdate,times)">Submit Update</div>
+</div>
+<div class="submit-site site-button submit-site-button" ng-click="submitUpdate(siteupdate,times)">Submit Update</div>
+</div>
 </div>

@@ -3,12 +3,16 @@
     <menu-directive></menu-directive>
     <div class="welcome-user-box">
     <div class="welcome-user roboto-text">
-      Welcome {{usersites.first_name}} {{usersites.last_name}},
+      Welcome {{username.first_name}} {{username.last_name}},
     </div>
     <p class="you-are-assigned roboto-text">Your current work sites:</p>
     <div class="sites-assigned roboto-text " ng-repeat="usite in usersites">
-
-
+    Name: {{usite.name}}
+    <br>
+    Address: {{usite.address_street}}, {{usite.address_city}}, {{usite.address_state}}
+    <br>
+    Site Info: {{usite.site_info}}
+<br><br>
     </div>
     </div>
 

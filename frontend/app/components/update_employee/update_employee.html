@@ -1,0 +1,18 @@
+<div class="site-box">
+    <title-directive></title-directive>
+    <menu-directive></menu-directive>
+    <div class="full-emp-container">
+        <input type="text" class="emp-name-change emp-first-name" ng-model="empupdate.first_name">
+        <input type="text" class="emp-name-change emp-last-name" ng-model="empupdate.last_name">
+        <div class="emp-update-box">
+            Admin:<input class="emp-input" type="text" ng-model="empupdate.admin"> Email:
+            <input class="emp-input" type="text" ng-model="empupdate.email"> Password:
+            <input class="emp-input" type="text" ng-model="empupdate.password">
+        </div>
+
+
+        <div class="submit-emp site-button" ng-click="submitEmployee(empupdate)">Submit Update</div>
+
+
+    </div>
+</div>

@@ -1,0 +1,24 @@
+.site-day-box {
+    margin: 16vh auto 10vh auto;
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.staggering-box{
+  margin: 0 15vw 0 15vw;
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+}
+
+.site-day {
+    margin: 0 0 0 0;
+    padding: 20px 0 0 20px;
+    font-size: 2.5rem;
+    color: #098491;
+}
+
+#last-day{
+  padding: 20px 0 70px 0 ;
+}

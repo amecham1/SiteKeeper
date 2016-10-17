@@ -1,0 +1,24 @@
+<div class="site-box">
+  <title-directive></title-directive>
+  <menu-directive></menu-directive>
+
+<div class="emp-select">
+
+<div class="emp-search">
+  <input class="update-input-emp roboto-text" type="text" ng-model="empFinder" placeholder="Find Employee">
+</div>
+<div class="emp-overview-box">
+
+<div class="emp-results roboto-text" ng-repeat="emp in employee |filter:empFinder" ng-click="updateEmp(emp)">
+
+Name:{{emp.first_name}} {{emp.last_name}}<br>
+Admin: {{emp.admin}} <br>
+Email: {{emp.email}}
+
+
+</div>
+
+</div>
+
+</div>
+</div>

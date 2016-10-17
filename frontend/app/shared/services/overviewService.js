@@ -3,6 +3,25 @@ angular.module('keeperApp')
 
 function overviewService($http){
 
+var selectedShiftId ={};
+
+if(localStorage.getItem("selectedShiftId")){
+selectedShiftId = JSON.parse(localStorage.getItem("selectedShiftId"));
+}
+this.getSiteId = function(){
+  return selectedShiftId;
+}
+this.setSiteId = function(data){
+  selectedShiftId = data;
+  localStorage.setItem("selectedShiftId",JSON.stringify(selectedShiftId));
+}
+
+console.log(this.idNumVar);
+
+// this.siteView = {};
+// console.log(this.siteView);
+
+
 this.overViewSites = function(){
   return $http({
     method:"GET",
@@ -11,6 +30,7 @@ this.overViewSites = function(){
 }
 
 this.showDays = function(idNum){
+
   return $http({
     method:"GET",
     url:"/scheduleDays/" + idNum
@@ -18,6 +38,7 @@ this.showDays = function(idNum){
 }
 
 this.showHours = function(idNum){
+  // console.log(idNum);
   return $http({
     method:"GET",
     url: "/scheduleHours/" + idNum

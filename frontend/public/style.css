@@ -10,6 +10,20 @@
   font-style: italic;
 }
 
+.site-box {
+  width: 100vw;
+  height: 100vh;
+  background-color: #EBE3DF;
+}
+
+.site-button {
+  text-align: center;
+  width: 20%;
+  padding: 20px 15px 20px 15px;
+  background-color: #C1D4D6;
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 768px) {
   .nav-bar {
     width: 21%;
@@ -36,24 +50,33 @@
   }
 }
 
-.site-box {
-  width: 100vw;
-  height: 100vh;
-  background-color: #EBE3DF;
+.site-day-box {
+  margin: 16vh auto 10vh auto;
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.staggering-box {
+  margin: 0 15vw 0 15vw;
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
 }
 
 .site-day {
-  padding: 20px 0 0 5px;
+  margin: 0 0 0 0;
+  padding: 20px 0 0 20px;
   font-size: 2.5rem;
   color: #098491;
 }
 
-.site-day-box {
-  margin: 30px auto 10px;
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
-  width: 50%;
+#last-day {
+  padding: 20px 0 70px 0;
+}
+
+.create-site {
+  overflow: scroll;
 }
 
 .site-input {
@@ -64,20 +87,43 @@
   width: 50%;
 }
 
-.site-button-box {
-  width: 50%;
+.site-name {
+  font-size: 1.5rem;
+  padding: 5px 0 5px 0;
+}
+
+.site-inputs {
+  padding: 10px 0 10px 0;
+  border-radius: 10px;
+}
+
+.next-button-box {
+  position: absolute;
+  top: 25vh;
+  right: -50px;
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: center;
+}
+
+.next-button {
+  margin: 15% 0 15% 0;
+}
+
+.employee-button-box {
+  width: 100%;
   display: flex;
   justify-content: space-around;
+  margin: 30px 0 0 0;
 }
 
-.last-site {
-  margin-bottom: 10px;
-}
-
-.site-button {
-  display: inline-block;
-  width: 20px;
-  margin: 0 auto;
+.shift-box {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
 }
 
 .shift-hours {
@@ -89,10 +135,13 @@
   padding: 20px 0;
 }
 
-.shift-box {
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
+.shift-title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.show-shifts {
+  width: 100%;
 }
 
 .shift-begin {
@@ -100,13 +149,14 @@
   display: inline-block;
 }
 
-.show-shifts {
-  width: 100%;
+.site-button-box {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
 }
 
-.shift-title {
-  text-align: center;
-  font-size: 2rem;
+.last-site {
+  margin-bottom: 10px;
 }
 
 .shift-layout {
@@ -128,16 +178,72 @@
   align-items: center;
 }
 
-.site-button {
-  text-align: center;
-  width: 20%;
-  padding: 20px 15px 20px 15px;
-  background-color: #C1D4D6;
-  border-radius: 10px;
-}
-
 .hour-button {
   margin: 15% 0 45px 0;
+}
+
+.emp-select {
+  width: 70%;
+  margin: 0 auto 0 auto;
+}
+
+.emp-search {
+  position: absolute;
+  top: 17vh;
+  right: 20vw;
+  font-size: 1.5rem;
+  margin: 30px 0 0 0;
+}
+
+.emp-overview-box {
+  width: 100%;
+  height: 50vh;
+  font-size: 1.5rem;
+  margin: 15vh 0 0 0;
+  overflow: scroll;
+}
+
+.emp-results {
+  width: 80%;
+  margin: 0 auto 0 auto;
+  padding: 20px 0 20px 0;
+}
+
+.full-emp-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+}
+
+.emp-name-change {
+  width: 50%;
+  margin: 20px auto;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.emp-first-name {
+  margin: 50px auto 10px;
+}
+
+.emp-input {
+  text-align: center;
+}
+
+.emp-update-box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+.submit-emp {
+  margin: 40px auto 0;
 }
 
 .main-page {
@@ -152,11 +258,17 @@
 }
 
 .welcome-user {
-  padding: 10px 5px 20px 5px;
+  font-size: 2rem;
+  padding: 30px 5px 20px 5px;
 }
 
 .you-are-assigned {
+  font-size: 1.5rem;
   padding: 10px 5px 20px 5px;
+}
+
+.sites-assigned {
+  font-size: 1.3rem;
 }
 
 .title-dir {
@@ -197,6 +309,44 @@
 
 #home-link {
   font-weight: 600;
+}
+
+.request-change-box {
+  width: 60%;
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.request-change-name {
+  width: 30%;
+  padding: 10px 0 10px 0;
+  margin: 30px 0 0 0;
+}
+
+.request-change-text {
+  margin: 10vh 0 0 0;
+  height: 30vh;
+}
+
+.request-change-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.request-change-button {
+  margin: 50px 0 0 0;
+  position: absolute;
+  bottom: 10vh;
+  right: 18vw;
+}
+
+textarea:focus {
+  outline: none !important;
+  border: 2px solid #55CCD9;
+  color: #098491;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -250,37 +400,72 @@ table {
   border-spacing: 0;
 }
 
-.schedule-title {
-  margin-top: 30px;
-  text-align: center;
-  font-size: 3rem;
-  color: blue;
-}
-
 .schedule-box {
   margin: 15px auto 0 auto;
   width: 70%;
 }
 
 .schedule-search {
+  width: 40%;
   float: right;
-  margin: 20px 30px 0 0;
+  padding: 10px 0 10px 0;
+  margin: 50px 40px 0 0;
+  font-size: 1.3rem;
 }
 
 .schedule-results-box {
   width: 100%;
-  background-color: papayawhip;
-  height: 85vh;
-  padding-top: 75px;
+  height: 65vh;
+  padding-top: 40px;
   overflow: scroll;
 }
 
 .schedule-results-actual {
-  margin: 0 auto 20px auto;
+  margin: 0 auto 40px auto;
   width: 80%;
   height: 15vh;
-  background-color: peru;
-  color: black;
+  font-size: 1.5rem;
+}
+
+.main-box-shifts {
+  margin: 0 auto 0 auto;
+  width: 70%;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  overflow: scroll;
+}
+
+.schedule-hours {
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.schedule-shift-box {
+  width: 40%;
+}
+
+.shift-contract-day {
+  width: 70%;
+  font-size: 2.5rem;
+  color: #098491;
+  border-bottom: 1px solid #4C5657;
+  margin-right: 5px;
+}
+
+.post-employee-shifts {
+  width: 20%;
+  position: absolute;
+  top: 5vh;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  transform: scale(2, 2);
 }
 
 .signin-box {
@@ -310,10 +495,6 @@ table {
   height: 25vh;
 }
 
-.ng-hide {
-  height: 0px;
-}
-
 .login-description {
   padding: 0 0 0 20px;
   font-size: 1.5rem;
@@ -334,15 +515,81 @@ table {
 
 .login-button {
   padding: 5vh 15vw 5vh 15vw;
-  margin: 20px auto 0 auto;
+  margin: 70px auto 0 auto;
   background-color: #C1D4D6;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-.signin-button {
-  padding: 20px 5px 20px 5px;
-  font-size: .9rem;
+.update-container-hours {
+  width: 90%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 0 10px 0 9vw;
+  padding: 0 50px;
+}
+
+.update-title-hours {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 3rem !important;
+}
+
+input:focus {
+  outline: none !important;
+  border: 2px solid #55CCD9;
+  color: #098491;
+}
+
+.hours-update-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  overflow: scroll;
+}
+
+.contract-start-end {
+  font-size: 1.6rem;
+  margin: 0 auto;
+  padding: 0 !important;
+  border-bottom: 1px solid #55CCD9;
+}
+
+.contract-times,
+.hours-update,
+.update-address {
+  font-size: 1.6rem;
+  overflow: scroll;
+}
+
+.update-address-box {
+  height: 10vh;
+  margin: 10px auto;
+  padding: 10px 0;
+  font-size: 1.8rem;
+  border-bottom: 1px solid #55CCD9;
+}
+
+.input-font {
+  font-size: 1.4rem;
+  background-color: #EBE3DF;
+  border: 0 none;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.input-day {
+  color: #098491;
+  font-size: 1.8rem !important;
+}
+
+.submit-site-button {
+  width: 20%;
+  position: absolute;
+  top: 19vh;
+  right: 5vw;
 }
 
 .update-container {
@@ -379,13 +626,12 @@ table {
 .update-site-box {
   width: 60vw;
   height: 75vh;
-  background-color: papayawhip;
   margin-top: 20px;
+  overflow: scroll;
 }
 
 .update-site-results {
   width: 60vw;
-  height: 20vh;
-  background-color: peru;
-  margin: 20px 0 10px 0;
+  padding: 20px 0 20px 0;
+  font-size: 1.5rem;
 }

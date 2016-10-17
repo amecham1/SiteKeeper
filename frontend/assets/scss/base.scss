@@ -9,7 +9,20 @@
 .roboto-text{
   font-family: 'Roboto Condensed', sans-serif;
   font-style: italic;
+}
 
+.site-box {
+    width: 100vw;
+    height: 100vh;
+    background-color: #EBE3DF;
+}
+
+.site-button {
+    text-align: center;
+    width: 20%;
+    padding: 20px 15px 20px 15px;
+    background-color: #C1D4D6;
+    border-radius: 10px
 }
 
 @media screen and(max-width:768px){

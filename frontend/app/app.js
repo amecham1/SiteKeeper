@@ -30,11 +30,11 @@ angular.module('keeperApp', ['ui.router','ui.bootstrap','ngAnimate','satellizer'
       templateUrl:'app/components/createsite/createhours.html',
       controller: 'createSiteCtrl'
     })
-    .state('updateemployee',{
-      url:'/updateemployee',
-      templateUrl:'app/components/update_site/update_employee.html',
-      controller:'updateSiteCtrl'
-    })
+    // .state('updateemployee',{
+    //   url:'/updateemployee',
+    //   templateUrl:'app/components/update_site/update_employee.html',
+    //   controller:'updateSiteCtrl'
+    // })
     .state('createemployee',{
       url:'/createemployee',
       templateUrl:'app/components/createsite/create_employee.html',
@@ -45,31 +45,36 @@ angular.module('keeperApp', ['ui.router','ui.bootstrap','ngAnimate','satellizer'
       templateUrl:'app/components/schedule/schedule.html',
       controller:'scheduleCtrl'
     })
-    .state('schedule.selectshift',{
+    .state('selectshift',{
       url:'/scheduleshifts',
       templateUrl:'app/components/schedule/scheduleshifts.html',
-      controller:'scheduleCtrl'
+      controller:'schedulehoursCtrl'
     })
     .state('updatesite',{
       url:'/updatesite',
       templateUrl:'app/components/update_site/update_site.html',
       controller:'updateSiteCtrl'
     })
-    .state('updatesite.updatefullsite',{
+    .state('updatefullsite',{
       url:'/fullsiteupdate',
       templateUrl:'app/components/update_site/update_fullsite.html',
-      controller:'updateSiteCtrl'
+      controller:'fullsiteCtrl'
     })
     .state('showemployee',{
       url:'/viewemployee',
-      templateUrl:'app/components/update_site/view_employee.html',
-      controller:'updateSiteCtrl'
+      templateUrl:'app/components/update_employee/view_employee.html',
+      controller:'empupdateCtrl'
     })
-    .state('showemployee.updateemployee',{
+    .state('updateemployee',{
       url:'/updateemployee',
-      templateUrl:'app/components/update_site/update_employee.html',
-      controller: 'updateSiteCtrl'
+      templateUrl:'app/components/update_employee/update_employee.html',
+      controller: 'fullempupdateCtrl'
     })
+    .state('requestchange',{
+      url:'/requestchange',
+      templateUrl:'app/components/request_change/request_change.html',
+      controller:'requestchangeCtrl'
+    });
 
 
 

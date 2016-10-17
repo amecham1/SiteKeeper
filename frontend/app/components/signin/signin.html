@@ -1,29 +1,21 @@
-
 <div class="signin-box">
 
-  <h1 class='signin-title raleway-text'>Site Tracker</h1>
-  <h3 class='signin-description roboto-text'>Security Scheduling Management System</h3>
-<form class="login-form" action="/login" method="post">
-  <div class="login-total" >
-    <div class="login-box" >
-        <label class="login-description roboto-text">Username:</label> <br>
-        <input class="user-input login-input" ng-model="login.username" type="text" name="username"/>
-    </div>
-    <div class="login-box">
-        <label class="login-description roboto-text">Password:</label> <br>
-        <input class="password-input login-input" ng-model="login.password" type="password" name="password"/>
-    </div>
-    </div>
-    <div ng-hide="done" class="login-button roboto-text" ng-click="beginlogin()">Login
-        <!-- <input class="signin-button" ng-click="beginlogin()" /> -->
+    <h1 class='signin-title raleway-text'>Site Tracker</h1>
+    <h3 class='signin-description roboto-text'>Security Scheduling Management System</h3>
+    <form class="login-form" action="/login" method="post" class="login-total">
+        <div class="login-total" ng-show="login">
+            <div class="login-box">
+                <label class="login-description roboto-text">Username:</label> <br>
+                <input class="user-input login-input" ng-model="login.username" type="text" name="username" />
+            </div>
+            <div class="login-box">
+                <label class="login-description roboto-text">Password:</label> <br>
+                <input class="password-input login-input" ng-model="login.password" type="password" name="password" />
+            </div>
+        </div>
 
-    </div>
-    <div ng-hide="realbutton" class="login-button" ng-click="submitlogin(login)">Login
-        <!-- <input class="signin-button" ng-click="beginlogin()" /> -->
+    </form>
+    <div class="login-button" ng-click="submitlogin(login)">Login</div>
 
-    </div>
 
-    <!-- value="Log In" -->
-    <!-- type="submit"  -->
-</form>
 </div>

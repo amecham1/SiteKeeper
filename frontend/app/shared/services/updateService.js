@@ -3,6 +3,38 @@ angular.module('keeperApp')
 
 function updateService($http){
 
+var selectedSiteId ={};
+
+
+if(localStorage.getItem("selectedSiteId")){
+selectedSiteId = JSON.parse(localStorage.getItem("selectedSiteId"));
+}
+this.getSiteId = function(){
+  return selectedSiteId;
+}
+this.setSiteId = function(data){
+  selectedSiteId = data;
+  localStorage.setItem("selectedSiteId",JSON.stringify(selectedSiteId));
+}
+
+
+var selectedEmpId ={};
+
+
+if(localStorage.getItem("selectedEmpId")){
+selectedEmpId = JSON.parse(localStorage.getItem("selectedEmpId"));
+}
+this.getEmpId = function(){
+  return selectedEmpId;
+}
+this.setEmpId = function(data){
+  selectedEmpId = data;
+  localStorage.setItem("selectedEmpId",JSON.stringify(selectedEmpId));
+}
+
+this.siteView = {};
+console.log(this.siteView);
+
 this.updateSite = function(){
   return $http({
     method:"GET",

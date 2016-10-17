@@ -1,0 +1,76 @@
+.shift-box {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.shift-hours {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    padding: 20px 0;
+}
+
+.shift-title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.show-shifts {
+    width: 100%;
+    // display: flex;
+    // justify-content: space-around;
+    // // padding-left: 10px;
+    // margin-right: 10px
+}
+
+.shift-begin {
+    padding: 0 10vw 10px 9vw;
+    display: inline-block;
+}
+
+
+.site-button-box {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.last-site {
+    margin-bottom: 10px;
+}
+
+.shift-layout {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    // padding-left: 10px;
+    margin-right: 10px;
+}
+
+.shift-time {
+    // display: inline-block;
+    // margin-left:20px;
+}
+
+
+.button-box {
+  position: absolute;
+  top: 10vh;
+  right: 0px;
+  // margin: 0 auto 0 auto;
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: center;
+  // justify-content: space-between;
+}
+
+.hour-button{
+    margin: 15% 0 45px 0;
+}

@@ -29,12 +29,12 @@
 .update-site-box{
   width: 60vw;
   height: 75vh;
-  background-color: papayawhip;
   margin-top: 20px;
+  overflow: scroll;
 }
 .update-site-results{
   width: 60vw;
-  height: 20vh;
-  background-color: peru;
-  margin: 20px 0 10px 0;
+  padding: 20px 0 20px 0;
+  font-size: 1.5rem;
+
 }
