@@ -2,8 +2,10 @@ angular.module('keeperApp').controller('fullsiteCtrl', fullsiteCtrl);
 
 function fullsiteCtrl($scope, updateService, $state,$filter) {
 
+var siteService = updateService.siteView
+console.log(siteService);
 
-    updateService.allSiteInfo(25).then(function(res) {
+    updateService.allSiteInfo().then(function(res) {
         console.log(res.data);
         $scope.siteupdate = res.data.site[0];
         $scope.begintimechange = res.data.site[0].contract_begin;

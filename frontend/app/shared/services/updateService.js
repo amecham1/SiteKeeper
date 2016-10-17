@@ -13,6 +13,9 @@ function updateService($http){
 //   // this.siteView = val;
 //   console.log(this.siteView);
 
+this.siteView = {};
+console.log(this.siteView);
+
 this.updateSite = function(){
   return $http({
     method:"GET",

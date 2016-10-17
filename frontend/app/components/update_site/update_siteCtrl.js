@@ -13,8 +13,9 @@ function updateSiteCtrl($scope, updateService, $state) {
     // $scope.checkNull = true;
 
     $scope.updateSite = function(siteview) {
-      console.log(siteview.site_id);
-    //  updateService.getSiteId(siteview.site_id);
+      updateService.getSiteview = siteview;
+      console.log(siteview);
+    //  updateService.showHours(siteview.site_id);
         // console.log(updateService.siteView);
         $state.go('updatefullsite');
   };
@@ -49,12 +50,12 @@ function updateSiteCtrl($scope, updateService, $state) {
     //   });
     // };
 
-    updateService.showemployee()
-    .then(function(emp){
-      // console.log(emp);
-
-      $scope.employee = emp.data;
-    });
+    // updateService.showemployee()
+    // .then(function(emp){
+    //   console.log(emp);
+    //
+    //   $scope.employee = emp.data;
+    // });
 
     $scope.updateEmp = function(emp){
       $scope.showupdate = false;

@@ -1,0 +1,36 @@
+.full-emp-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+}
+
+.emp-name-change {
+    width: 50%;
+    margin: 20px auto;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.emp-first-name {
+    margin: 50px auto 10px;
+}
+
+.emp-input {
+    text-align: center;
+}
+
+.emp-update-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.submit-emp {
+    margin: 40px auto 0;
+}

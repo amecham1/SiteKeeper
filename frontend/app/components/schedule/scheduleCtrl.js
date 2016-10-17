@@ -6,6 +6,7 @@ function scheduleCtrl($scope, overviewService, $state) {
     // var siteArray = [];
 
     overviewService.overViewSites().then(function(res) {
+      console.log(res.data);
         var siteObj = res.data;
         $scope.siteoverview = res.data;
     });
