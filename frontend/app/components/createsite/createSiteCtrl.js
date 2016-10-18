@@ -44,6 +44,8 @@ $scope.showshifts1 = false;
     $scope.createEmployee = function(employee) {
         createService.createemployee(employee).then(function(response) {
           $scope.employeeId = response.data[0].user_id;
+          $state.go('mainpage');
+          swal("Employee Created!","","success")
 
         })
     }
@@ -65,7 +67,8 @@ $scope.showshifts1 = false;
         createService.createhours(val).then(function(response) {});
       }
       })
-
+      $state.go('mainpage');
+      swal("Site and hours created!","","success");
     }
 
 

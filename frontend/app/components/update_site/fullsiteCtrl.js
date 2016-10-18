@@ -32,6 +32,8 @@ var selectedSiteId = updateService.getSiteId()
             updateService.updatehours(siteId, val).then(function(res) {});
             siteId = 0;
         });
+        $state.go('mainpage');
+        swal("Site and hours updated!","","success");
     };
 
 } //end of controller

@@ -32,12 +32,12 @@ console.log(selectedShiftId);
     }
 
     $scope.submitEmpShifts = function() {
-      console.log('fired');
-      console.log(selectedShifts);
         selectedShifts.forEach(function(val) {
             overviewService.employeeSchedule(val).then(function(response) {})
         })
         selectedShifts = [];
+        swal("Shift Scheduled!"," ", "success")
+        $state.go('mainpage')
     }
 
 } //end of controller
