@@ -42,11 +42,7 @@ passport.use(new LocalStrategy(
   // console.log('test');
   function(username,password,done){
     db.user_pass([username],function(err,user){
-<<<<<<< HEAD
-=======
-
       user = user[0];
->>>>>>> cf6f57c3fd540cb5627d9b54c68377eb7876a2ea
       if(err){
         //console.log('username not given');
         //console.log('error in LocalStrategy', err);
