@@ -41,7 +41,7 @@ var db = app.get('db');
 passport.use(new LocalStrategy(
   function(username,password,done){
     db.user_pass([username],function(err,user){
-      user = user[0];
+	user =user[0];
       if(err){
         //console.log('username not given');
         //console.log('error in LocalStrategy', err);
