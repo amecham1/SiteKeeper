@@ -13,7 +13,8 @@ $scope.empupdate = getEmpId;
 $scope.submitEmployee = function(data){
 updateService.updateemployee(data)
 .then(function(response){});
-
+$state.go('mainpage');
+swal("Employee updated!","","success");
 }
 
 

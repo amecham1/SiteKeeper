@@ -39,9 +39,14 @@ const request = require('./server/requests/requests.js');
 var db = app.get('db');
 
 passport.use(new LocalStrategy(
+  // console.log('test');
   function(username,password,done){
     db.user_pass([username],function(err,user){
-	user =user[0];
+<<<<<<< HEAD
+=======
+
+      user = user[0];
+>>>>>>> cf6f57c3fd540cb5627d9b54c68377eb7876a2ea
       if(err){
         //console.log('username not given');
         //console.log('error in LocalStrategy', err);
@@ -86,7 +91,7 @@ app.get('/schedulehours/:id', request.scheduleHours);
 app.get('/getUserInfo/:id',request.getUserInfo);
 
 app.post('/auth/login', passport.authenticate('local'), function(req, res) {
-// console.log(req.user);
+console.log(req.user);
     res.status(200).json(req.user);
 
 });
