@@ -5,7 +5,7 @@ const cors = require('cors');
 const massive = require('massive');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-const config = require('./server/config/config.json');
+const config = require('./server_config.js');
 var connectionstring = config.connectionString;
 
 var app = express();
@@ -60,6 +60,7 @@ function(username, password, done) {
         } else {
             return done(null, user);
         }
+
     });
 }))
 
